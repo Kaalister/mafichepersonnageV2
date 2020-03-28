@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/mafichepersonnage/static/css/main.7b4704db.chunk.css",
-    "main.js": "/mafichepersonnage/static/js/main.8815de54.chunk.js",
-    "main.js.map": "/mafichepersonnage/static/js/main.8815de54.chunk.js.map",
-    "runtime-main.js": "/mafichepersonnage/static/js/runtime-main.f3cc1403.js",
-    "runtime-main.js.map": "/mafichepersonnage/static/js/runtime-main.f3cc1403.js.map",
-    "static/js/2.c278cebc.chunk.js": "/mafichepersonnage/static/js/2.c278cebc.chunk.js",
-    "static/js/2.c278cebc.chunk.js.map": "/mafichepersonnage/static/js/2.c278cebc.chunk.js.map",
-    "index.html": "/mafichepersonnage/index.html",
-    "precache-manifest.ed6fa9a12f4e2c32b92832c61362172e.js": "/mafichepersonnage/precache-manifest.ed6fa9a12f4e2c32b92832c61362172e.js",
-    "service-worker.js": "/mafichepersonnage/service-worker.js",
-    "static/css/main.7b4704db.chunk.css.map": "/mafichepersonnage/static/css/main.7b4704db.chunk.css.map",
-    "static/js/2.c278cebc.chunk.js.LICENSE.txt": "/mafichepersonnage/static/js/2.c278cebc.chunk.js.LICENSE.txt",
-    "static/media/avatar.jpg": "/mafichepersonnage/static/media/avatar.283e56f9.jpg",
-    "static/media/base.jpg": "/mafichepersonnage/static/media/base.08b60efc.jpg",
-    "static/media/mid.jpg": "/mafichepersonnage/static/media/mid.7cd75e2e.jpg",
-    "static/media/top.jpg": "/mafichepersonnage/static/media/top.17d52e9b.jpg"
+    "main.css": "/mafichepersonnageV2/static/css/main.7b4704db.chunk.css",
+    "main.js": "/mafichepersonnageV2/static/js/main.6ecb14d9.chunk.js",
+    "main.js.map": "/mafichepersonnageV2/static/js/main.6ecb14d9.chunk.js.map",
+    "runtime-main.js": "/mafichepersonnageV2/static/js/runtime-main.22792ec2.js",
+    "runtime-main.js.map": "/mafichepersonnageV2/static/js/runtime-main.22792ec2.js.map",
+    "static/js/2.c278cebc.chunk.js": "/mafichepersonnageV2/static/js/2.c278cebc.chunk.js",
+    "static/js/2.c278cebc.chunk.js.map": "/mafichepersonnageV2/static/js/2.c278cebc.chunk.js.map",
+    "index.html": "/mafichepersonnageV2/index.html",
+    "precache-manifest.838ac5ff9880c19ace894d526948acaf.js": "/mafichepersonnageV2/precache-manifest.838ac5ff9880c19ace894d526948acaf.js",
+    "service-worker.js": "/mafichepersonnageV2/service-worker.js",
+    "static/css/main.7b4704db.chunk.css.map": "/mafichepersonnageV2/static/css/main.7b4704db.chunk.css.map",
+    "static/js/2.c278cebc.chunk.js.LICENSE.txt": "/mafichepersonnageV2/static/js/2.c278cebc.chunk.js.LICENSE.txt",
+    "static/media/avatar.jpg": "/mafichepersonnageV2/static/media/avatar.283e56f9.jpg",
+    "static/media/base.jpg": "/mafichepersonnageV2/static/media/base.08b60efc.jpg",
+    "static/media/mid.jpg": "/mafichepersonnageV2/static/media/mid.7cd75e2e.jpg",
+    "static/media/top.jpg": "/mafichepersonnageV2/static/media/top.17d52e9b.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.f3cc1403.js",
+    "static/js/runtime-main.22792ec2.js",
     "static/js/2.c278cebc.chunk.js",
     "static/css/main.7b4704db.chunk.css",
-    "static/js/main.8815de54.chunk.js"
+    "static/js/main.6ecb14d9.chunk.js"
   ]
 }
