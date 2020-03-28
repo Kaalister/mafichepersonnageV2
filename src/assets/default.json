@@ -1,0 +1,27 @@
+{
+    "Character": {
+        "characteristic": [],
+        "statistic": [],
+        "note": ""
+    },
+    "CharacterSettings": {
+        "firstName": "",
+        "lastName":"",
+        "skill": [],
+        "characteristic": [],
+        "statistic": [],
+        "bio":"",
+        "work":"",
+        "avatar":""
+    },
+    "Option":{},
+    "Equipment": {
+        "head": [],
+        "trunk": [],
+        "hands": [],
+        "legs": [],
+        "foots": [],
+        "waepon": []
+    },
+    "Inventory": []
+}
