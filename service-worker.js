@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/mafichepersonnageV2/precache-manifest.27996c4c189ba3a53fa13b2218696f1a.js"
+  "/mafichepersonnageV2/precache-manifest.e68d8d5684b6f3b8fa3ecf537afe11da.js"
 );
 
 self.addEventListener('message', (event) => {
