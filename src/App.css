@@ -34,8 +34,8 @@
 }
 
 @font-face {
-  font-family: "Blacksword";
-  src: local("Blacksword"), url(./assets/font/Blacksword.otf) format('truetype')
+  font-family: "OldeEnglish";
+  src: local("OldeEnglish"), url(./assets/font/OldeEnglish.ttf) format('truetype')
 }
 
 ::placeholder {
@@ -54,7 +54,7 @@ html, body, #app, #root, #app>div {
 
 .littleText {
   /* font-family: 'Merienda One', cursive; */
-  font-family: "Blacksword";
+  font-family: "OldeEnglish";
 }
 
 .bigText {

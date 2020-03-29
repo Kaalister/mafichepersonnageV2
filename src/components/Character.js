@@ -50,7 +50,9 @@ export default class Character extends React.Component {
                     <div style={styles.tabContainer} key={obj.name + "_" + index}>
                         <div style={styles.tabCase} className="littleText">
                             - {obj.name} : 
-                            {obj.desc} 
+                            <div style={styles.tabDesc}>
+                                {obj.desc} 
+                            </div>
                         </div>
                     </div>
                 );
@@ -144,7 +146,7 @@ const styles = {
         marginTop: 10,
         marginBottom: 10,
         textDecoration: "underline",
-        fontSize: 30,
+        fontSize: 35,
     },
     section: {
         marginBottom: 30,
@@ -155,7 +157,7 @@ const styles = {
     },
     text: {
         width: 180,
-        fontSize: 25,
+        fontSize: 35,
         marginTop: 10,
         marginLeft: 5,
         marginRight: 5,
@@ -163,7 +165,7 @@ const styles = {
     },
     longText: {
         width: "100%",
-        fontSize: 20,
+        fontSize: 35,
         marginTop: 10,
         backgroundColor: "transparent",
         border: "none",
@@ -173,15 +175,21 @@ const styles = {
         flexDirecion: "row",
     },
     tabCase: {
+        display: "flex",
         marginTop: 10,
-        fontSize: 20,
+        fontSize: 35,
     },
     tabInput: {
-        fontSize: 20,
+        fontSize: 35,
         backgroundColor: "transparent",
         border: "none",
         maxWidth: 100,
         marginLeft:5,
     },
-
+    tabDesc: {
+        fontSize: 35,
+        marginLeft: 5,
+        wrapText: "wrap",
+        maxWidth: 400,
+    }
 }

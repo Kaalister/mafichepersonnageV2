@@ -170,7 +170,7 @@ export default class CharacterSettings extends React.Component {
             return (
                     <div style={styles.tabContainer} key={obj.name + "_" + index}>
                         <div style={styles.tabCase} className="littleText">
-                            - {obj.name} : 
+                        {"- " + obj.name + " : "}  
                             <input type="number" style={styles.tabInput} className="littleText" value={obj.val} onChange={(e) => {this.handleTab("carac", e.target.value, index, obj.name)}}/> 
                         </div>
                         <button style={styles.delBtn} onClick={()=> {this.removeFromTab(index, "carac")}}>-</button>
@@ -182,7 +182,7 @@ export default class CharacterSettings extends React.Component {
             return (
                     <div style={styles.tabContainer} key={obj.name + "_" + index}>
                         <div style={styles.tabCase} className="littleText">
-                            - {obj.name} : 
+                            {"- " + obj.name + " : "} 
                             <div style={styles.tabDesc} className="littleText">
                                 {obj.desc} 
                             </div>
@@ -196,7 +196,7 @@ export default class CharacterSettings extends React.Component {
             return (
                 <div style={styles.tabContainer} key={obj.name + "_" + index}>
                 <div style={styles.tabCase} className="littleText">
-                    - {obj.name} : 
+                    {"- " + obj.name + " : "} 
                     <input type="number" style={styles.tabInput} className="littleText" value={obj.val} onChange={(e) => {this.handleTab("stat", e.target.value, index, obj.name)}}/> 
                 </div>
                 <button style={styles.delBtn} onClick={()=> {this.removeFromTab(index, "stat")}}>-</button>
@@ -293,7 +293,7 @@ const styles = {
         marginTop: 10,
         marginBottom: 10,
         textDecoration: "underline",
-        fontSize: 30,
+        fontSize: 35,
     },
     section: {
         marginBottom: 30,
@@ -303,7 +303,7 @@ const styles = {
         textAlign: "center",
     },
     inputNumber: {
-        fontSize: 20,
+        fontSize: 35,
         maxWidth: 100,
         marginTop: 10,
         marginLeft: 5,
@@ -316,7 +316,7 @@ const styles = {
     },
     inputText: {
         maxWidth: 180,
-        fontSize: 20,
+        fontSize: 35,
         marginTop: 10,
         marginLeft: 5,
         marginRight: 5,
@@ -328,7 +328,7 @@ const styles = {
     },
     textarea: {
         width: "100%",
-        fontSize: 20,
+        fontSize: 35,
         marginTop: 10,
         backgroundColor: "rgba(224, 167, 150, 0.4)",
         boxShadow: "inset 0px 0px 5px #353535",
@@ -337,7 +337,7 @@ const styles = {
     },
     inputTextLong: {
         minWidth: 300,
-        fontSize: 20,
+        fontSize: 35,
         marginTop: 10,
         marginLeft: 5,
         marginRight: 5,
@@ -363,11 +363,11 @@ const styles = {
     },
     tabCase: {
         marginTop: 10,
-        fontSize: 20,
+        fontSize: 35,
         display: "flex",
     },
     tabInput: {
-        fontSize: 20,
+        fontSize: 35,
         backgroundColor: "Transparent",
         border: "none",
         maxWidth: 100,
@@ -391,7 +391,7 @@ const styles = {
         border: "none",
     },
     tabDesc: {
-        fontSize: 20,
+        fontSize: 35,
         marginLeft: 5,
         wrapText: "wrap",
         maxWidth: 400,

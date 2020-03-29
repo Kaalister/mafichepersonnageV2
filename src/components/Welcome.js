@@ -42,7 +42,7 @@ const styles = {
         display: "none",
     },
     intro: {
-        fontSize: 30,
+        fontSize: 35,
         textAlign: "center",
     },
     button: {

@@ -83,7 +83,7 @@ const styles = {
         textAlign: "center",
     },
     section: {
-        marginBottom: 30,
+        marginBottom: 35,
         textDecoration: "underline",
         fontSize: 40,
         width: "100%",
@@ -92,7 +92,7 @@ const styles = {
     name: {
         flex: 1,
         maxWidth: 200,
-        fontSize: 20,
+        fontSize: 35,
         marginTop: 10,
         marginLeft: 5,
         marginRight: 5,
@@ -104,7 +104,7 @@ const styles = {
     },
     desc: {
         flex: 1,
-        fontSize: 20,
+        fontSize: 35,
         marginTop: 10,
         marginLeft: 5,
         marginRight: 5,
@@ -115,7 +115,7 @@ const styles = {
         border: "none",
     },
     inputNum: {
-        fontSize: 20,
+        fontSize: 35,
         maxWidth: 100,
         marginTop: 10,
         marginLeft: 5,
@@ -156,7 +156,7 @@ const styles = {
         display: "flex",
     },
     numTab: {
-        fontSize: 20,
+        fontSize: 35,
         maxWidth: 100,
         marginTop: 10,
         marginLeft: 5,
@@ -169,7 +169,7 @@ const styles = {
         overflowWrap: "break-word",
         flex: 1,
         maxWidth: 200,
-        fontSize: 20,
+        fontSize: 35,
         marginTop: 10,
         marginLeft: 5,
         marginRight: 5,
@@ -179,7 +179,7 @@ const styles = {
     },
     descTab: {
         flex: 1,
-        fontSize: 20,
+        fontSize: 35,
         marginTop: 10,
         marginLeft: 5,
         marginRight: 5,

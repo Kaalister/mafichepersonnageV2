@@ -32,7 +32,7 @@ const styles = {
     },
     OnWork: {
         width: "100%",
-        fontSize: 50,
+        fontSize: 60,
         marginBottom: 50,
         marginTop: 50,
     }
