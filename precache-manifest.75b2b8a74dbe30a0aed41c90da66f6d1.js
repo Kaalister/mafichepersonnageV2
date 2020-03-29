@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "4648112ffdff2302269af7cceeb445d4",
+    "revision": "566f0355790eaae9a33b59138cf57d6c",
     "url": "/mafichepersonnageV2/index.html"
   },
   {
-    "revision": "2e6a95601bff2ee267ca",
-    "url": "/mafichepersonnageV2/static/css/main.555b114b.chunk.css"
+    "revision": "165c6d0ec907ec2d28d5",
+    "url": "/mafichepersonnageV2/static/css/main.c576d0a5.chunk.css"
   },
   {
     "revision": "0759525e19a4dd540c72",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/mafichepersonnageV2/static/js/2.c278cebc.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "2e6a95601bff2ee267ca",
-    "url": "/mafichepersonnageV2/static/js/main.dcf2c0ce.chunk.js"
+    "revision": "165c6d0ec907ec2d28d5",
+    "url": "/mafichepersonnageV2/static/js/main.6a05f7bb.chunk.js"
   },
   {
     "revision": "06fc2637d878e38a074e",
@@ -30,6 +30,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "d15613cdc186717b8c23f02392ce876b",
     "url": "/mafichepersonnageV2/static/media/CloisterBlack.d15613cd.ttf"
+  },
+  {
+    "revision": "713ad647718093479ef7ba690c320048",
+    "url": "/mafichepersonnageV2/static/media/OldeEnglish.713ad647.ttf"
   },
   {
     "revision": "283e56f97527181054c23112f47ec74a",
