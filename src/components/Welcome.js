@@ -17,7 +17,7 @@ export default class Welcome extends React.Component {
 			reader.onload = () => {
                 let obj = JSON.parse(reader.result);
                 console.log(obj);
-                this.props.setInfo(obj);
+                this.props.setInfo(obj, "Character");
 			};
         })
     }

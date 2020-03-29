@@ -27,8 +27,11 @@ export default class App extends React.Component {
 		this.setState({page: dest, Burger: false});
 	}
 
-	setInfo = (infos) => {
-		this.setState({infos: infos}, this.forceUpdate());
+	setInfo = (infos, dest = null) => {
+		if (dest == null)
+			this.setState({infos: infos}, this.forceUpdate());
+		else
+			this.setState({infos: infos, page: dest}, this.forceUpdate());
 	}
 
 	render () {
