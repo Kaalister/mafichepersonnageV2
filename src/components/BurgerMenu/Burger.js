@@ -20,6 +20,7 @@ export default class BurgerMenu extends React.Component {
                         <button style={styles.section} className="bigText" onClick={()=> {this.handleChangeDest("Inventory")}}>Inventaire</button>
                         <button style={styles.section} className="bigText" onClick={()=> {this.handleChangeDest("Tutorial")}}>Tutoriel</button>
                         <button style={styles.section} className="bigText" onClick={()=> {this.handleChangeDest("Settings")}}>Options</button>
+                        <div style={{height: 80}} />
                     </div>
                 </div>
                     <button style={styles.closeBtn} onClick={()=> {this.props.setBurger(false)}}>
