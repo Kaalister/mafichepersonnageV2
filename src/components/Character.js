@@ -16,7 +16,7 @@ export default class Character extends React.Component {
     handleTab = (tab, event, index, name) => {
         let newinfos = JSON.parse(JSON.stringify(this.state.infos));
 
-        if (tab === "carac") {
+        if (tab === "carac" && event - this.state.infos.CharacterSettings.characteristic[index].val <= 0) {
             newinfos.Character.characteristic[index] = {name: name, val: event - this.state.infos.CharacterSettings.characteristic[index].val};
         }
         if (tab === "stat") {
@@ -69,6 +69,7 @@ export default class Character extends React.Component {
 
         return(
             <div style={styles.container}>
+                <div style={styles.section}>Personnage :</div>
                 <div style={styles.avatar}>
                     <img
                         src={image}
@@ -145,6 +146,14 @@ const styles = {
         textDecoration: "underline",
         fontFamily: "UnifrakturMaguntia",
         fontSize: 30,
+    },
+    section: {
+        marginBottom: 30,
+        textDecoration: "underline",
+        fontFamily: "UnifrakturMaguntia",
+        fontSize: 40,
+        width: "100%",
+        textAlign: "center",
     },
     text: {
         width: 180,

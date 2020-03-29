@@ -44,6 +44,8 @@ const styles = {
     },
     menu: {
         backgroundImage: `url(${background})`,
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "cover",
         width: 500,
         height: "100%",
         boxShadow: "0px 0px 30px #000000, inset 0px 0px 10px #000000",

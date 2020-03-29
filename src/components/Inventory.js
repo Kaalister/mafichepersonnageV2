@@ -62,7 +62,7 @@ export default class Inventory extends React.Component {
 
         return(
             <div style={styles.container}>
-                <div style={styles.title}>Inventaire :</div>
+                <div style={styles.section}>Inventaire :</div>
                 <div style={{flex: 1, display: "flex", width:"100%"}}>
                     <input type="text" style={styles.name} placeholder="Nom de l'object" value={this.state.name} onChange={(e) => {this.handleName(e)}}/>
                     <input type="text" style={styles.desc} placeholder="Description de l'object" value={this.state.desc} onChange={(e) => {this.handleDesc(e)}}/>
@@ -82,12 +82,13 @@ const styles = {
         flex: 1,
         textAlign: "center",
     },
-    title: {
-        marginTop: 10,
-        marginBottom: 20,
+    section: {
+        marginBottom: 30,
         textDecoration: "underline",
         fontFamily: "UnifrakturMaguntia",
         fontSize: 40,
+        width: "100%",
+        textAlign: "center",
     },
     name: {
         flex: 1,

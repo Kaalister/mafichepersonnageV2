@@ -8,6 +8,9 @@ import CharacterSettings from './components/CharacterSettings';
 import Character from './components/Character';
 import Inventory from './components/Inventory';
 import BurgerMenu from './components/BurgerMenu/Burger';
+import Settings from './components/Settings';
+import Equipment from './components/Equipment';
+import Tutorial from './components/Tutorial';
 
 export default class App extends React.Component {
 	state = {
@@ -55,7 +58,7 @@ export default class App extends React.Component {
 					break;
 				case "Equipment":
 					contents = 	<div style={styles.page}>
-									Equipment
+									<Equipment/>
 								</div>;
 					break;
 				case "Inventory":
@@ -68,12 +71,12 @@ export default class App extends React.Component {
 					break;
 				case "Tutorial":
 					contents = 	<div style={styles.page}>
-									Tutorial
+									<Tutorial/>
 								</div>;
 					break;
 				case "Settings":
 					contents = 	<div style={styles.page}>
-									Settings
+									<Settings/>
 								</div>;
 					break;
 			}

@@ -170,7 +170,7 @@ export default class CharacterSettings extends React.Component {
             return (
                     <div style={styles.tabContainer} key={obj.name + "_" + index}>
                         <div style={styles.tabCase}>
-                            - {obj.name} :
+                            - {obj.name} : 
                             <input type="number" style={styles.tabInput} value={obj.val} onChange={(e) => {this.handleTab("carac", e.target.value, index, obj.name)}}/> 
                         </div>
                         <button style={styles.delBtn} onClick={()=> {this.removeFromTab(index, "carac")}}>-</button>
@@ -183,7 +183,9 @@ export default class CharacterSettings extends React.Component {
                     <div style={styles.tabContainer} key={obj.name + "_" + index}>
                         <div style={styles.tabCase}>
                             - {obj.name} : 
-                            {obj.desc} 
+                            <div style={styles.tabDesc}>
+                                {obj.desc} 
+                            </div>
                         </div>
                         <button style={styles.delBtn} onClick={()=> {this.removeFromTab(index, "comp")}}>-</button>
                     </div>
@@ -194,7 +196,7 @@ export default class CharacterSettings extends React.Component {
             return (
                 <div style={styles.tabContainer} key={obj.name + "_" + index}>
                 <div style={styles.tabCase}>
-                    - {obj.name} :
+                    - {obj.name} : 
                     <input type="number" style={styles.tabInput} value={obj.val} onChange={(e) => {this.handleTab("stat", e.target.value, index, obj.name)}}/> 
                 </div>
                 <button style={styles.delBtn} onClick={()=> {this.removeFromTab(index, "stat")}}>-</button>
@@ -204,6 +206,7 @@ export default class CharacterSettings extends React.Component {
 
         return(
             <div style={styles.container}>
+                <div style={styles.section}>Options Personnage :</div>
                 <div style={styles.avatar}>
                     <input type="file" id="inputImg" style={{display : "none"}} alt="" accept=".jpg,.png"/>
                     <button style={styles.invisibleBtn} className="clickable" onClick={() => {this.handleImg()}}>
@@ -293,6 +296,14 @@ const styles = {
         fontFamily: "UnifrakturMaguntia",
         fontSize: 30,
     },
+    section: {
+        marginBottom: 30,
+        textDecoration: "underline",
+        fontFamily: "UnifrakturMaguntia",
+        fontSize: 40,
+        width: "100%",
+        textAlign: "center",
+    },
     inputNumber: {
         fontSize: 20,
         maxWidth: 100,
@@ -360,6 +371,7 @@ const styles = {
         marginTop: 10,
         fontFamily: "'Merienda One', cursive",
         fontSize: 20,
+        display: "flex",
     },
     tabInput: {
         fontFamily: "'Merienda One', cursive",
@@ -386,4 +398,11 @@ const styles = {
         backgroundColor: "transparent",
         border: "none",
     },
+    tabDesc: {
+        fontFamily: "'Merienda One', cursive",
+        fontSize: 20,
+        marginLeft: 5,
+        wrapText: "wrap",
+        maxWidth: 400,
+    }
 }
