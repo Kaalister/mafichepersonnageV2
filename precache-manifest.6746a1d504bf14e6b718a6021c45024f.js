@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "67e9bfd6fc2f6b449df80093d573177e",
+    "revision": "0a6c5d7123dc96410b522118ca590762",
     "url": "/mafichepersonnageV2/index.html"
   },
   {
-    "revision": "c91c84eb33d3b3375307",
-    "url": "/mafichepersonnageV2/static/css/main.7b4704db.chunk.css"
+    "revision": "bb7a2ca0734d0430af23",
+    "url": "/mafichepersonnageV2/static/css/main.555b114b.chunk.css"
   },
   {
     "revision": "0759525e19a4dd540c72",
@@ -16,12 +16,20 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/mafichepersonnageV2/static/js/2.c278cebc.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "c91c84eb33d3b3375307",
-    "url": "/mafichepersonnageV2/static/js/main.867c683a.chunk.js"
+    "revision": "bb7a2ca0734d0430af23",
+    "url": "/mafichepersonnageV2/static/js/main.4ff0dfb7.chunk.js"
   },
   {
     "revision": "06fc2637d878e38a074e",
     "url": "/mafichepersonnageV2/static/js/runtime-main.22792ec2.js"
+  },
+  {
+    "revision": "a905312054999db40ea9c69d0794c926",
+    "url": "/mafichepersonnageV2/static/media/Blacksword.a9053120.otf"
+  },
+  {
+    "revision": "d15613cdc186717b8c23f02392ce876b",
+    "url": "/mafichepersonnageV2/static/media/CloisterBlack.d15613cd.ttf"
   },
   {
     "revision": "283e56f97527181054c23112f47ec74a",
