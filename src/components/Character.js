@@ -37,9 +37,9 @@ export default class Character extends React.Component {
         caracteristiques = this.state.infos.Character.characteristic.map((obj, index) => {
             return (
                     <div style={styles.tabContainer} key={obj.name + "_" + index}>
-                        <div style={styles.tabCase}>
+                        <div style={styles.tabCase} className="littleText">
                             - {obj.name} :
-                            <input type="number" style={styles.tabInput} value={obj.val + this.state.infos.CharacterSettings.characteristic[index].val} onChange={(e) => {this.handleTab("carac", e.target.value, index, obj.name)}}/> 
+                            <input type="number" style={styles.tabInput} className="littleText" value={obj.val + this.state.infos.CharacterSettings.characteristic[index].val} onChange={(e) => {this.handleTab("carac", e.target.value, index, obj.name)}}/> 
                         </div>
                     </div>
                 );
@@ -48,7 +48,7 @@ export default class Character extends React.Component {
         competences = this.state.infos.CharacterSettings.skill.map((obj, index) => {
             return (
                     <div style={styles.tabContainer} key={obj.name + "_" + index}>
-                        <div style={styles.tabCase}>
+                        <div style={styles.tabCase} className="littleText">
                             - {obj.name} : 
                             {obj.desc} 
                         </div>
@@ -59,9 +59,9 @@ export default class Character extends React.Component {
         stats = this.state.infos.Character.statistic.map((obj, index) => {
             return (
                 <div style={styles.tabContainer} key={obj.name + "_" + index}>
-                <div style={styles.tabCase}>
+                <div style={styles.tabCase} className="littleText">
                     - {obj.name} :
-                    <input type="number" style={styles.tabInput} value={obj.val + this.state.infos.CharacterSettings.statistic[index].val} onChange={(e) => {this.handleTab("stat", e.target.value, index, obj.name)}}/> 
+                    <input type="number" style={styles.tabInput} className="littleText" value={obj.val + this.state.infos.CharacterSettings.statistic[index].val} onChange={(e) => {this.handleTab("stat", e.target.value, index, obj.name)}}/> 
                 </div>
             </div>
                 );
@@ -69,7 +69,7 @@ export default class Character extends React.Component {
 
         return(
             <div style={styles.container}>
-                <div style={styles.section}>Personnage :</div>
+                <div style={styles.section} className="bigText">Personnage :</div>
                 <div style={styles.avatar}>
                     <img
                         src={image}
@@ -78,31 +78,31 @@ export default class Character extends React.Component {
                     />
                     <div style={styles.avatarDesc}>
                         <div style={{display: "flex"}}>
-                            <div style={styles.text}>{this.state.infos.CharacterSettings.firstName}</div>
-                            <div style={styles.text}>{this.state.infos.CharacterSettings.lastName}</div>
+                            <div style={styles.text} className="littleText">{this.state.infos.CharacterSettings.firstName}</div>
+                            <div style={styles.text} className="littleText">{this.state.infos.CharacterSettings.lastName}</div>
                         </div>
-                        <div style={styles.text}>{this.state.infos.CharacterSettings.work}</div>
+                        <div style={styles.text} className="littleText">{this.state.infos.CharacterSettings.work}</div>
                         <div>
-                            <div style={styles.title}>Caractéristiques :</div>
+                            <div style={styles.title} className="bigText">Caractéristiques :</div>
                             {caracteristiques}
                         </div>
                     </div>
                 </div>
                 <div style={styles.skills}>
-                    <div style={styles.title}>Compétences :</div>
+                    <div style={styles.title} className="bigText">Compétences :</div>
                     {competences}
                 </div>
                 <div style={{width: "100%"}}>
-                    <div style={styles.title}>Biographie :</div>
-                    <div style={styles.longText}>{this.state.infos.CharacterSettings.bio}</div>
+                    <div style={styles.title} className="bigText">Biographie :</div>
+                    <div style={styles.longText} className="littleText">{this.state.infos.CharacterSettings.bio}</div>
                 </div>
                 <div style={{width: "100%"}}>
-                    <div style={styles.title}>Statistiques :</div>
+                    <div style={styles.title} className="bigText">Statistiques :</div>
                     {stats}
                 </div>
                 <div style={{width: "100%", marginBottom: 100}}>
-                    <div style={styles.title}>Notes :</div>
-                    <textarea style={styles.longText} value={this.state.infos.Character.note} onChange={(e) => {this.handleNotes(e)}}></textarea>
+                    <div style={styles.title} className="bigText">Notes :</div>
+                    <textarea style={styles.longText} className="littleText" value={this.state.infos.Character.note} onChange={(e) => {this.handleNotes(e)}}></textarea>
                 </div>
             </div>
         )
@@ -144,13 +144,11 @@ const styles = {
         marginTop: 10,
         marginBottom: 10,
         textDecoration: "underline",
-        fontFamily: "UnifrakturMaguntia",
         fontSize: 30,
     },
     section: {
         marginBottom: 30,
         textDecoration: "underline",
-        fontFamily: "UnifrakturMaguntia",
         fontSize: 40,
         width: "100%",
         textAlign: "center",
@@ -158,7 +156,6 @@ const styles = {
     text: {
         width: 180,
         fontSize: 25,
-        fontFamily: "'Merienda One', cursive",
         marginTop: 10,
         marginLeft: 5,
         marginRight: 5,
@@ -167,7 +164,6 @@ const styles = {
     longText: {
         width: "100%",
         fontSize: 20,
-        fontFamily: "'Merienda One', cursive",
         marginTop: 10,
         backgroundColor: "transparent",
         border: "none",
@@ -178,11 +174,9 @@ const styles = {
     },
     tabCase: {
         marginTop: 10,
-        fontFamily: "'Merienda One', cursive",
         fontSize: 20,
     },
     tabInput: {
-        fontFamily: "'Merienda One', cursive",
         fontSize: 20,
         backgroundColor: "transparent",
         border: "none",

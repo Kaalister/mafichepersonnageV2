@@ -25,11 +25,11 @@ export default class Welcome extends React.Component {
     render() {
         return(
             <div style={{flex: 1}}>
-                <div style={styles.intro}>Ce site te permettra de créer et d'éditer votre fiche de personnage de jeu de role.</div><br/>
-                <div style={styles.intro}>Prenez par à l'aventure !!!</div>
+                <div style={styles.intro} className="littleText">Ce site te permettra de créer et d'éditer votre fiche de personnage de jeu de role.</div><br/>
+                <div style={styles.intro}className="littleText">Prenez par à l'aventure !!!</div>
                 <div style={styles.buttonArea}>
-                    <button style={styles.button} onClick={()=>{this.createNewCharacter()}}>Créer</button>
-                    <button style={styles.button} onClick={()=>{this.getFile()}}>Ouvrir</button>
+                    <button style={styles.button} className="littleText" onClick={()=>{this.createNewCharacter()}}>Créer</button>
+                    <button style={styles.button} className="littleText" onClick={()=>{this.getFile()}}>Ouvrir</button>
                 </div>
                 <input name="myfile" type="file" id="inputFile" accept=".json" style={styles.input}/>
             </div>
@@ -43,12 +43,10 @@ const styles = {
     },
     intro: {
         fontSize: 30,
-        fontFamily: "'Merienda One', cursive",
         textAlign: "center",
     },
     button: {
         fontSize: 30,
-        fontFamily: "'Merienda One', cursive",
         width: 100,
         height: 60,
         margin: 30,

@@ -169,9 +169,9 @@ export default class CharacterSettings extends React.Component {
         caracteristiques = this.state.infos.CharacterSettings.characteristic.map((obj, index) => {
             return (
                     <div style={styles.tabContainer} key={obj.name + "_" + index}>
-                        <div style={styles.tabCase}>
+                        <div style={styles.tabCase} className="littleText">
                             - {obj.name} : 
-                            <input type="number" style={styles.tabInput} value={obj.val} onChange={(e) => {this.handleTab("carac", e.target.value, index, obj.name)}}/> 
+                            <input type="number" style={styles.tabInput} className="littleText" value={obj.val} onChange={(e) => {this.handleTab("carac", e.target.value, index, obj.name)}}/> 
                         </div>
                         <button style={styles.delBtn} onClick={()=> {this.removeFromTab(index, "carac")}}>-</button>
                     </div>
@@ -181,9 +181,9 @@ export default class CharacterSettings extends React.Component {
         competences = this.state.infos.CharacterSettings.skill.map((obj, index) => {
             return (
                     <div style={styles.tabContainer} key={obj.name + "_" + index}>
-                        <div style={styles.tabCase}>
+                        <div style={styles.tabCase} className="littleText">
                             - {obj.name} : 
-                            <div style={styles.tabDesc}>
+                            <div style={styles.tabDesc} className="littleText">
                                 {obj.desc} 
                             </div>
                         </div>
@@ -195,9 +195,9 @@ export default class CharacterSettings extends React.Component {
         stats = this.state.infos.CharacterSettings.statistic.map((obj, index) => {
             return (
                 <div style={styles.tabContainer} key={obj.name + "_" + index}>
-                <div style={styles.tabCase}>
+                <div style={styles.tabCase} className="littleText">
                     - {obj.name} : 
-                    <input type="number" style={styles.tabInput} value={obj.val} onChange={(e) => {this.handleTab("stat", e.target.value, index, obj.name)}}/> 
+                    <input type="number" style={styles.tabInput} className="littleText" value={obj.val} onChange={(e) => {this.handleTab("stat", e.target.value, index, obj.name)}}/> 
                 </div>
                 <button style={styles.delBtn} onClick={()=> {this.removeFromTab(index, "stat")}}>-</button>
             </div>
@@ -206,7 +206,7 @@ export default class CharacterSettings extends React.Component {
 
         return(
             <div style={styles.container}>
-                <div style={styles.section}>Options Personnage :</div>
+                <div style={styles.section} className="bigText">Options Personnage :</div>
                 <div style={styles.avatar}>
                     <input type="file" id="inputImg" style={{display : "none"}} alt="" accept=".jpg,.png"/>
                     <button style={styles.invisibleBtn} className="clickable" onClick={() => {this.handleImg()}}>
@@ -217,13 +217,13 @@ export default class CharacterSettings extends React.Component {
                         />
                     </button>
                     <div style={styles.avatarDesc}>
-                        <input type="text" placeholder="Prénom" onChange={(data) => {(this.handleFirstName(data))}} style={styles.inputText} value={this.state.infos.CharacterSettings.firstName}/>
-                        <input type="text" placeholder="Nom" onChange={(data) => {(this.handleLastName(data))}} style={styles.inputText} value={this.state.infos.CharacterSettings.lastName}/><br/>
-                        <input type="text" placeholder="Métier / Race" onChange={(data) => {(this.handleWork(data))}} style={styles.inputText} value={this.state.infos.CharacterSettings.work}/>
+                        <input type="text" placeholder="Prénom" onChange={(data) => {(this.handleFirstName(data))}} style={styles.inputText} className="littleText" value={this.state.infos.CharacterSettings.firstName}/>
+                        <input type="text" placeholder="Nom" onChange={(data) => {(this.handleLastName(data))}} style={styles.inputText} className="littleText" value={this.state.infos.CharacterSettings.lastName}/><br/>
+                        <input type="text" placeholder="Métier / Race" onChange={(data) => {(this.handleWork(data))}} style={styles.inputText} className="littleText" value={this.state.infos.CharacterSettings.work}/>
                         <div>
-                            <div style={styles.title}>Caractéristiques :</div>
-                            <input type="text" placeholder="Nom" onChange={(data) => {(this.handleCaracName(data))}} style={styles.inputText} value={this.state.caracName}></input>:
-                            <input type="number" placeholder="Valeur Max" onChange={(data) => {(this.handleCaracVal(data))}} style={styles.inputNumber} value={this.state.caracVal}></input>
+                            <div style={styles.title} className="bigText">Caractéristiques :</div>
+                            <input type="text" placeholder="Nom" onChange={(data) => {(this.handleCaracName(data))}} style={styles.inputText} className="littleText" value={this.state.caracName}></input>:
+                            <input type="number" placeholder="Valeur Max" onChange={(data) => {(this.handleCaracVal(data))}} style={styles.inputNumber} className="littleText" value={this.state.caracVal}></input>
                             <button style={styles.addButton} onClick={() => {this.handleAddCarac()}}>+</button>
                             <div>
                                 {caracteristiques}
@@ -232,22 +232,22 @@ export default class CharacterSettings extends React.Component {
                     </div>
                 </div>
                 <div style={styles.skills}>
-                    <div style={styles.title}>Compétences :</div>
-                    <input type="text" placeholder="Nom" onChange={(data) => {(this.handleCompName(data))}} style={styles.inputText} value={this.state.compName}></input>:
-                    <input type="text" placeholder="Description" onChange={(data) => {(this.handleCompDesc(data))}} style={styles.inputTextLong} value={this.state.compDesc}></input>
+                    <div style={styles.title} className="bigText">Compétences :</div>
+                    <input type="text" placeholder="Nom" onChange={(data) => {(this.handleCompName(data))}} style={styles.inputText} className="littleText" value={this.state.compName}></input>:
+                    <input type="text" placeholder="Description" onChange={(data) => {(this.handleCompDesc(data))}} style={styles.inputTextLong} className="littleText" value={this.state.compDesc}></input>
                     <button style={styles.addButton} onClick={() => {this.handleAddComp()}}>+</button>
                     <div>
                         {competences}
                     </div>
                 </div>
                 <div style={{width: "100%"}}>
-                    <div style={styles.title}>Biographie :</div>
-                    <textarea style={styles.textarea} onChange={(data) => {(this.handleBio(data))}} value={this.state.infos.CharacterSettings.bio}></textarea>
+                    <div style={styles.title} className="bigText">Biographie :</div>
+                    <textarea style={styles.textarea} className="littleText" onChange={(data) => {(this.handleBio(data))}} value={this.state.infos.CharacterSettings.bio}></textarea>
                 </div>
                 <div style={{width: "100%", marginBottom: 100}}>
-                    <div style={styles.title}>Statistiques :</div>
-                    <input type="text" placeholder="Nom" onChange={(data) => {(this.handleStatName(data))}} style={styles.inputText} value={this.state.statName}></input>:
-                    <input type="number" placeholder="Valeur Max" onChange={(data) => {(this.handleStatVal(data))}} style={styles.inputNumber} value={this.state.statVal}></input>
+                    <div style={styles.title} className="bigText">Statistiques :</div>
+                    <input type="text" placeholder="Nom" onChange={(data) => {(this.handleStatName(data))}} className="littleText" style={styles.inputText} value={this.state.statName}></input>:
+                    <input type="number" placeholder="Valeur Max" onChange={(data) => {(this.handleStatVal(data))}} style={styles.inputNumber} className="littleText" value={this.state.statVal}></input>
                     <button style={styles.addButton} onClick={() => {this.handleAddStat()}}>+</button>
                     <div>
                         {stats}
@@ -293,13 +293,11 @@ const styles = {
         marginTop: 10,
         marginBottom: 10,
         textDecoration: "underline",
-        fontFamily: "UnifrakturMaguntia",
         fontSize: 30,
     },
     section: {
         marginBottom: 30,
         textDecoration: "underline",
-        fontFamily: "UnifrakturMaguntia",
         fontSize: 40,
         width: "100%",
         textAlign: "center",
@@ -307,7 +305,6 @@ const styles = {
     inputNumber: {
         fontSize: 20,
         maxWidth: 100,
-        fontFamily: "'Merienda One', cursive",
         marginTop: 10,
         marginLeft: 5,
         marginRight: 5,
@@ -320,7 +317,6 @@ const styles = {
     inputText: {
         maxWidth: 180,
         fontSize: 20,
-        fontFamily: "'Merienda One', cursive",
         marginTop: 10,
         marginLeft: 5,
         marginRight: 5,
@@ -333,7 +329,6 @@ const styles = {
     textarea: {
         width: "100%",
         fontSize: 20,
-        fontFamily: "'Merienda One', cursive",
         marginTop: 10,
         backgroundColor: "rgba(224, 167, 150, 0.4)",
         boxShadow: "inset 0px 0px 5px #353535",
@@ -343,7 +338,6 @@ const styles = {
     inputTextLong: {
         minWidth: 300,
         fontSize: 20,
-        fontFamily: "'Merienda One', cursive",
         marginTop: 10,
         marginLeft: 5,
         marginRight: 5,
@@ -369,12 +363,10 @@ const styles = {
     },
     tabCase: {
         marginTop: 10,
-        fontFamily: "'Merienda One', cursive",
         fontSize: 20,
         display: "flex",
     },
     tabInput: {
-        fontFamily: "'Merienda One', cursive",
         fontSize: 20,
         backgroundColor: "Transparent",
         border: "none",
@@ -399,7 +391,6 @@ const styles = {
         border: "none",
     },
     tabDesc: {
-        fontFamily: "'Merienda One', cursive",
         fontSize: 20,
         marginLeft: 5,
         wrapText: "wrap",

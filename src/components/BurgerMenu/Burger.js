@@ -13,18 +13,18 @@ export default class BurgerMenu extends React.Component {
             <div id="burgerMenu" style={styles.container} className={this.props.Burger ? "activate":""}>
                 <div style={styles.menu}>
                     <div style={styles.list}>
-                        <div style={styles.title}>Menu :</div>
-                        <button style={styles.section} onClick={()=> {this.handleChangeDest("Character")}}>Personnage</button>
-                        <button style={styles.section} onClick={()=> {this.handleChangeDest("CharacterSettings")}}>Option Personnage</button>
-                        <button style={styles.section} onClick={()=> {this.handleChangeDest("Equipment")}}>Équipement</button>
-                        <button style={styles.section} onClick={()=> {this.handleChangeDest("Inventory")}}>Inventaire</button>
-                        <button style={styles.section} onClick={()=> {this.handleChangeDest("Tutorial")}}>Tutoriel</button>
-                        <button style={styles.section} onClick={()=> {this.handleChangeDest("Settings")}}>Options</button>
+                        <div style={styles.title} className="bigText">Menu :</div>
+                        <button style={styles.section} className="bigText" onClick={()=> {this.handleChangeDest("Character")}}>Personnage</button>
+                        <button style={styles.section} className="bigText" onClick={()=> {this.handleChangeDest("CharacterSettings")}}>Option Personnage</button>
+                        <button style={styles.section} className="bigText" onClick={()=> {this.handleChangeDest("Equipment")}}>Équipement</button>
+                        <button style={styles.section} className="bigText" onClick={()=> {this.handleChangeDest("Inventory")}}>Inventaire</button>
+                        <button style={styles.section} className="bigText" onClick={()=> {this.handleChangeDest("Tutorial")}}>Tutoriel</button>
+                        <button style={styles.section} className="bigText" onClick={()=> {this.handleChangeDest("Settings")}}>Options</button>
                     </div>
                 </div>
                     <button style={styles.closeBtn} onClick={()=> {this.props.setBurger(false)}}>
                         <div style={styles.divMenu}>
-                            <div style={styles.vertcalText}>Close</div>
+                            <div style={styles.vertcalText} className="bigText">Close</div>
                         </div>
                     </button>
 			</div>
@@ -37,9 +37,9 @@ const styles = {
 		position: "absolute",
         left: 0,
         marginLeft: "-100%",
-		backgroundColor: "transparent",
-		width: "100%",
-        height: "100%",
+        backgroundColor: "transparent",
+        width: "100%",
+        minHeight: "100%",
         display: "flex",
     },
     menu: {
@@ -67,7 +67,6 @@ const styles = {
         height: "90%",
         writingMode: "vertical-rl",
         fontSize: 30,
-        fontFamily: "UnifrakturMaguntia",
         flex: 1,
     },
     list: {
@@ -78,7 +77,6 @@ const styles = {
     },
     section: {
         textDecoration: "underline",
-        fontFamily: "UnifrakturMaguntia",
         fontSize: 40,
         marginBottom: 30,
         backgroundColor: "transparent",
@@ -87,7 +85,6 @@ const styles = {
     },
     title: {
         textDecoration: "underline",
-        fontFamily: "UnifrakturMaguntia",
         fontSize: 50,
         marginBottom: 40,
     }

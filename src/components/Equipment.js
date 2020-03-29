@@ -9,8 +9,8 @@ export default class Equipment extends React.Component {
     render() {
         return(
             <div style={styles.container}>
-                <div style={styles.section}>Équipement :</div>
-                <div style={styles.OnWork}>En Travaux</div>
+                <div style={styles.section} className="bigText">Équipement :</div>
+                <div style={styles.OnWork} className="littleText">En Travaux</div>
             </div>
         )
     }
@@ -26,13 +26,11 @@ const styles = {
     section: {
         marginBottom: 30,
         textDecoration: "underline",
-        fontFamily: "UnifrakturMaguntia",
         fontSize: 40,
         width: "100%",
         textAlign: "center",
     },
     OnWork: {
-        fontFamily: "'Merienda One', cursive",
         width: "100%",
         fontSize: 50,
         marginBottom: 50,

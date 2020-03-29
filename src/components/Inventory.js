@@ -52,9 +52,9 @@ export default class Inventory extends React.Component {
         let inventory = this.state.infos.Inventory.map((obj, index) => {
             return (
                 <div style={styles.tabContainer} key={obj.name + "_" + index}>
-                    <div style={styles.nameTab}>{obj.name}</div>
-                    <input type="text" style={styles.descTab} value={obj.desc} onChange={(e) => {this.handleInTab(e, index, "desc")}}/>
-                    <input type="number" style={styles.numTab} value={obj.num} onChange={(e) => {this.handleInTab(e, index, "num")}}/>
+                    <div style={styles.nameTab} className="littleText">{obj.name}</div>
+                    <input type="text" style={styles.descTab} className="littleText" value={obj.desc} onChange={(e) => {this.handleInTab(e, index, "desc")}}/>
+                    <input type="number" style={styles.numTab} className="littleText" value={obj.num} onChange={(e) => {this.handleInTab(e, index, "num")}}/>
                     <button style={styles.delBtn} onClick={() => {this.handleDelElem(index)}}>-</button>
                 </div>
             );
@@ -62,11 +62,11 @@ export default class Inventory extends React.Component {
 
         return(
             <div style={styles.container}>
-                <div style={styles.section}>Inventaire :</div>
+                <div style={styles.section} className="bigText">Inventaire :</div>
                 <div style={{flex: 1, display: "flex", width:"100%"}}>
-                    <input type="text" style={styles.name} placeholder="Nom de l'object" value={this.state.name} onChange={(e) => {this.handleName(e)}}/>
-                    <input type="text" style={styles.desc} placeholder="Description de l'object" value={this.state.desc} onChange={(e) => {this.handleDesc(e)}}/>
-                    <input type="number" style={styles.inputNum} placeholder="Nombre" value={this.state.number} onChange={(e) => {this.handleNum(e)}}/>
+                    <input type="text" style={styles.name} className="littleText" placeholder="Nom de l'object" value={this.state.name} onChange={(e) => {this.handleName(e)}}/>
+                    <input type="text" style={styles.desc} className="littleText" placeholder="Description de l'object" value={this.state.desc} onChange={(e) => {this.handleDesc(e)}}/>
+                    <input type="number" style={styles.inputNum} className="littleText" placeholder="Nombre" value={this.state.number} onChange={(e) => {this.handleNum(e)}}/>
                     <button style={styles.btn} onClick={() => {this.handleAddElem()}}>+</button>
                 </div>
                 {inventory}
@@ -85,7 +85,6 @@ const styles = {
     section: {
         marginBottom: 30,
         textDecoration: "underline",
-        fontFamily: "UnifrakturMaguntia",
         fontSize: 40,
         width: "100%",
         textAlign: "center",
@@ -94,7 +93,6 @@ const styles = {
         flex: 1,
         maxWidth: 200,
         fontSize: 20,
-        fontFamily: "'Merienda One', cursive",
         marginTop: 10,
         marginLeft: 5,
         marginRight: 5,
@@ -107,7 +105,6 @@ const styles = {
     desc: {
         flex: 1,
         fontSize: 20,
-        fontFamily: "'Merienda One', cursive",
         marginTop: 10,
         marginLeft: 5,
         marginRight: 5,
@@ -120,7 +117,6 @@ const styles = {
     inputNum: {
         fontSize: 20,
         maxWidth: 100,
-        fontFamily: "'Merienda One', cursive",
         marginTop: 10,
         marginLeft: 5,
         marginRight: 5,
@@ -162,7 +158,6 @@ const styles = {
     numTab: {
         fontSize: 20,
         maxWidth: 100,
-        fontFamily: "'Merienda One', cursive",
         marginTop: 10,
         marginLeft: 5,
         marginRight: 5,
@@ -175,7 +170,6 @@ const styles = {
         flex: 1,
         maxWidth: 200,
         fontSize: 20,
-        fontFamily: "'Merienda One', cursive",
         marginTop: 10,
         marginLeft: 5,
         marginRight: 5,
@@ -186,7 +180,6 @@ const styles = {
     descTab: {
         flex: 1,
         fontSize: 20,
-        fontFamily: "'Merienda One', cursive",
         marginTop: 10,
         marginLeft: 5,
         marginRight: 5,

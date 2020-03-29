@@ -12,6 +12,7 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -27,6 +28,16 @@
   background-size: 100% 300px;
 }
 
+@font-face {
+  font-family: "CloisterBlack";
+  src: local("CloisterBlack"), url(./assets/font/CloisterBlack.ttf) format('truetype')
+}
+
+@font-face {
+  font-family: "Blacksword";
+  src: local("Blacksword"), url(./assets/font/Blacksword.otf) format('truetype')
+}
+
 ::placeholder {
   color: "#fff";
   opacity: 1;
@@ -39,6 +50,16 @@ html, body, #app, #root, #app>div {
 
 .clickable:hover {
   cursor: pointer;
+}
+
+.littleText {
+  /* font-family: 'Merienda One', cursive; */
+  font-family: "Blacksword";
+}
+
+.bigText {
+  /* font-family: "UnifrakturMaguntia"; */
+  font-family: "CloisterBlack";
 }
 
 .activate {
