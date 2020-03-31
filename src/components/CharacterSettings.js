@@ -133,10 +133,10 @@ export default class CharacterSettings extends React.Component {
         let newinfos = JSON.parse(JSON.stringify(this.state.infos));
 
         if (tab === "carac") {
-            newinfos.CharacterSettings.characteristic[index] = {name: name, val: event};
+            newinfos.CharacterSettings.characteristic[index] = {name: name, val: parseInt(event)};
         }
         if (tab === "stat") {
-            newinfos.CharacterSettings.statistic[index] = {name: name, val: event};
+            newinfos.CharacterSettings.statistic[index] = {name: name, val: parseInt(event)};
         }
 
         this.setState({infos: newinfos}, this.props.setInfo(newinfos));
