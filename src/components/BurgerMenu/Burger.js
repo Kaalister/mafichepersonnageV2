@@ -15,7 +15,7 @@ export default class BurgerMenu extends React.Component {
                     <div style={styles.list}>
                         <div style={styles.title} className="bigText">Menu :</div>
                         <button style={styles.section} className="bigText" onClick={()=> {this.handleChangeDest("Character")}}>Personnage</button>
-                        <button style={styles.section} className="bigText" onClick={()=> {this.handleChangeDest("CharacterSettings")}}>Option Personnage</button>
+                        <button style={styles.section} className="bigText" onClick={()=> {this.handleChangeDest("CharacterSettings")}}>Options Personnage</button>
                         <button style={styles.section} className="bigText" onClick={()=> {this.handleChangeDest("Equipment")}}>Équipement</button>
                         <button style={styles.section} className="bigText" onClick={()=> {this.handleChangeDest("Inventory")}}>Inventaire</button>
                         <button style={styles.section} className="bigText" onClick={()=> {this.handleChangeDest("Tutorial")}}>Tutoriel</button>
