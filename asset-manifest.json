@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/mafichepersonnageV2/static/css/main.c576d0a5.chunk.css",
-    "main.js": "/mafichepersonnageV2/static/js/main.c0fdb744.chunk.js",
-    "main.js.map": "/mafichepersonnageV2/static/js/main.c0fdb744.chunk.js.map",
+    "main.js": "/mafichepersonnageV2/static/js/main.0b44f784.chunk.js",
+    "main.js.map": "/mafichepersonnageV2/static/js/main.0b44f784.chunk.js.map",
     "runtime-main.js": "/mafichepersonnageV2/static/js/runtime-main.22792ec2.js",
     "runtime-main.js.map": "/mafichepersonnageV2/static/js/runtime-main.22792ec2.js.map",
     "static/js/2.c278cebc.chunk.js": "/mafichepersonnageV2/static/js/2.c278cebc.chunk.js",
     "static/js/2.c278cebc.chunk.js.map": "/mafichepersonnageV2/static/js/2.c278cebc.chunk.js.map",
     "index.html": "/mafichepersonnageV2/index.html",
-    "precache-manifest.819769f842848e97221086375a50e08b.js": "/mafichepersonnageV2/precache-manifest.819769f842848e97221086375a50e08b.js",
+    "precache-manifest.0b068a23b5944df132ef5b9f9fb48525.js": "/mafichepersonnageV2/precache-manifest.0b068a23b5944df132ef5b9f9fb48525.js",
     "service-worker.js": "/mafichepersonnageV2/service-worker.js",
     "static/css/main.c576d0a5.chunk.css.map": "/mafichepersonnageV2/static/css/main.c576d0a5.chunk.css.map",
     "static/js/2.c278cebc.chunk.js.LICENSE.txt": "/mafichepersonnageV2/static/js/2.c278cebc.chunk.js.LICENSE.txt",
@@ -24,6 +24,6 @@
     "static/js/runtime-main.22792ec2.js",
     "static/js/2.c278cebc.chunk.js",
     "static/css/main.c576d0a5.chunk.css",
-    "static/js/main.c0fdb744.chunk.js"
+    "static/js/main.0b44f784.chunk.js"
   ]
 }

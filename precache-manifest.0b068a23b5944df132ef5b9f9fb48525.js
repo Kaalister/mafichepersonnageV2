@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "5315c6651b95581b67352772ec1003c3",
+    "revision": "fc60d0acfb6af0dcd619d70b43ca3daf",
     "url": "/mafichepersonnageV2/index.html"
   },
   {
-    "revision": "9e7f5c239115fea4f5e3",
+    "revision": "e54f1a48c36f335de591",
     "url": "/mafichepersonnageV2/static/css/main.c576d0a5.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/mafichepersonnageV2/static/js/2.c278cebc.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "9e7f5c239115fea4f5e3",
-    "url": "/mafichepersonnageV2/static/js/main.c0fdb744.chunk.js"
+    "revision": "e54f1a48c36f335de591",
+    "url": "/mafichepersonnageV2/static/js/main.0b44f784.chunk.js"
   },
   {
     "revision": "06fc2637d878e38a074e",
