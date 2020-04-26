@@ -77,7 +77,7 @@ export default class Character extends React.Component {
                         src={image}
                         alt=""
                         style={styles.img}
-                    />
+                        />
                     <div style={styles.avatarDesc}>
                         <div style={{display: "flex"}}>
                             <div style={styles.text} className="littleText">{this.state.infos.CharacterSettings.firstName}</div>
@@ -123,6 +123,7 @@ const styles = {
         flex: 1,
         display: "flex",
         flexDirecion: "row",
+        minHeight: "657px",
     },
     avatar: {
         flex: 1,

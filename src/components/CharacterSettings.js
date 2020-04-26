@@ -349,6 +349,9 @@ const styles = {
         wrapText: "wrap",
     },
     addButton: {
+        height: 30,
+        width: 30,
+        cursor: "pointer",
         marginLeft: 10,
         fontWeight: "bold",
         backgroundColor: "#804d00",

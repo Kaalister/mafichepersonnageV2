@@ -36,9 +36,15 @@ export default class App extends React.Component {
 
 	render () {
 		let contents;
+		let size = 0;
+
+		if (document.getElementById("Body")) {
+			size = document.getElementById("Body").offsetHeight;
+		}
+
 		if (this.state.infos == null) {
 			contents =	<div style={styles.page}>
-							<Welcome infos={this.infos} setInfo={this.setInfo}/>
+							<Welcome infos={this.infos} setInfo={this.setInfo} height={size}/>
 						</div>;
 		} else {
 			switch (this.state.page) {
@@ -61,7 +67,10 @@ export default class App extends React.Component {
 					break;
 				case "Equipment":
 					contents = 	<div style={styles.page}>
-									<Equipment/>
+									<Equipment
+										infos={this.state.infos}
+										setInfo={this.setInfo}
+									/>
 								</div>;
 					break;
 				case "Inventory":
@@ -74,20 +83,22 @@ export default class App extends React.Component {
 					break;
 				case "Tutorial":
 					contents = 	<div style={styles.page}>
-									<Tutorial/>
+									<Tutorial
+									/>
 								</div>;
 					break;
 				case "Settings":
 					contents = 	<div style={styles.page}>
-									<Settings/>
+									<Settings
+									/>
 								</div>;
 					break;
 			}
 		}
 		return(
-			<div style={styles.body}>
-				<BurgerMenu infos={this.state.infos} setInfo={this.setInfo} Burger={this.state.Burger} setBurger={this.setBurger} setPage={this.setPage}/>
-				<Header infos={this.state.infos} setBurger={this.setBurger}/>
+			<div id="Body" style={styles.body}>
+				<BurgerMenu infos={this.state.infos} setInfo={this.setInfo} Burger={this.state.Burger} setBurger={this.setBurger} setPage={this.setPage} height={size}/>
+				<Header infos={this.state.infos} setBurger={this.setBurger} Burger={this.state.Burger}/>
 				{contents}
 			</div>
 		);

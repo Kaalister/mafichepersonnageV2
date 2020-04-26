@@ -12,7 +12,7 @@ export default class Header extends React.Component {
 		var name = this.props.infos.CharacterSettings.lastName + this.props.infos.CharacterSettings.firstName;
 
 		if (this.props.infos.CharacterSettings.lastName === "" && this.props.infos.CharacterSettings.firstName === "")
-			name = "MaFichePersonnage";
+            name = "MaFichePersonnage";
 		FileSaver.saveAs(blob, name + ".json" );
     }
 
@@ -32,7 +32,7 @@ export default class Header extends React.Component {
                         </div>
                     </button>
                     {name}
-                    <button style={styles.buttonMenu} onClick={() => {this.handleSave()}}>
+                    <button style={styles.buttonMenu} onClick={() => {this.handleSave()}} disabled={this.props.Burger}>
                         <div style={styles.divSave}>
                             <div style={styles.revVerticalText} className="bigText">Save</div>
                         </div>

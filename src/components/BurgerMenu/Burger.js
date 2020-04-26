@@ -9,8 +9,9 @@ export default class BurgerMenu extends React.Component {
     }
 
     render() {
+        let height = this.props.height;
         return( 
-            <div id="burgerMenu" style={styles.container} className={this.props.Burger ? "activate":""}>
+            <div id="burgerMenu" style={{...styles.container, minHeight: height}} className={this.props.Burger ? "activate":""}>
                 <div style={styles.menu}>
                     <div style={styles.list}>
                         <div style={styles.title} className="bigText">Menu :</div>
@@ -38,7 +39,7 @@ const styles = {
 		position: "absolute",
         left: 0,
         marginLeft: "-100%",
-        backgroundColor: "transparent",
+        backgroundColor: "rgba(0, 0, 0, 0.43)",
         width: "100%",
         minHeight: "100%",
         display: "flex",
