@@ -1,29 +1,35 @@
 {
   "files": {
     "main.css": "/mafichepersonnageV2/static/css/main.c576d0a5.chunk.css",
-    "main.js": "/mafichepersonnageV2/static/js/main.0b44f784.chunk.js",
-    "main.js.map": "/mafichepersonnageV2/static/js/main.0b44f784.chunk.js.map",
+    "main.js": "/mafichepersonnageV2/static/js/main.febf0c88.chunk.js",
+    "main.js.map": "/mafichepersonnageV2/static/js/main.febf0c88.chunk.js.map",
     "runtime-main.js": "/mafichepersonnageV2/static/js/runtime-main.22792ec2.js",
     "runtime-main.js.map": "/mafichepersonnageV2/static/js/runtime-main.22792ec2.js.map",
-    "static/js/2.c278cebc.chunk.js": "/mafichepersonnageV2/static/js/2.c278cebc.chunk.js",
-    "static/js/2.c278cebc.chunk.js.map": "/mafichepersonnageV2/static/js/2.c278cebc.chunk.js.map",
+    "static/js/2.f8e502a6.chunk.js": "/mafichepersonnageV2/static/js/2.f8e502a6.chunk.js",
+    "static/js/2.f8e502a6.chunk.js.map": "/mafichepersonnageV2/static/js/2.f8e502a6.chunk.js.map",
     "index.html": "/mafichepersonnageV2/index.html",
-    "precache-manifest.0b068a23b5944df132ef5b9f9fb48525.js": "/mafichepersonnageV2/precache-manifest.0b068a23b5944df132ef5b9f9fb48525.js",
+    "precache-manifest.3099a16efe68b6e8a77172ebd4313528.js": "/mafichepersonnageV2/precache-manifest.3099a16efe68b6e8a77172ebd4313528.js",
     "service-worker.js": "/mafichepersonnageV2/service-worker.js",
     "static/css/main.c576d0a5.chunk.css.map": "/mafichepersonnageV2/static/css/main.c576d0a5.chunk.css.map",
-    "static/js/2.c278cebc.chunk.js.LICENSE.txt": "/mafichepersonnageV2/static/js/2.c278cebc.chunk.js.LICENSE.txt",
+    "static/js/2.f8e502a6.chunk.js.LICENSE.txt": "/mafichepersonnageV2/static/js/2.f8e502a6.chunk.js.LICENSE.txt",
     "static/media/Blacksword.otf": "/mafichepersonnageV2/static/media/Blacksword.a9053120.otf",
     "static/media/CloisterBlack.ttf": "/mafichepersonnageV2/static/media/CloisterBlack.d15613cd.ttf",
     "static/media/OldeEnglish.ttf": "/mafichepersonnageV2/static/media/OldeEnglish.713ad647.ttf",
     "static/media/avatar.jpg": "/mafichepersonnageV2/static/media/avatar.283e56f9.jpg",
     "static/media/base.jpg": "/mafichepersonnageV2/static/media/base.08b60efc.jpg",
+    "static/media/foot.png": "/mafichepersonnageV2/static/media/foot.f1da215c.png",
+    "static/media/hand.png": "/mafichepersonnageV2/static/media/hand.4c6d4d57.png",
+    "static/media/headset.png": "/mafichepersonnageV2/static/media/headset.acc56cf9.png",
     "static/media/mid.jpg": "/mafichepersonnageV2/static/media/mid.7cd75e2e.jpg",
-    "static/media/top.jpg": "/mafichepersonnageV2/static/media/top.17d52e9b.jpg"
+    "static/media/pants.png": "/mafichepersonnageV2/static/media/pants.9328514f.png",
+    "static/media/plastron.png": "/mafichepersonnageV2/static/media/plastron.6eba44d8.png",
+    "static/media/top.jpg": "/mafichepersonnageV2/static/media/top.17d52e9b.jpg",
+    "static/media/weapon.png": "/mafichepersonnageV2/static/media/weapon.24254220.png"
   },
   "entrypoints": [
     "static/js/runtime-main.22792ec2.js",
-    "static/js/2.c278cebc.chunk.js",
+    "static/js/2.f8e502a6.chunk.js",
     "static/css/main.c576d0a5.chunk.css",
-    "static/js/main.0b44f784.chunk.js"
+    "static/js/main.febf0c88.chunk.js"
   ]
 }
