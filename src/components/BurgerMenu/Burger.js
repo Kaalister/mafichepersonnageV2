@@ -36,6 +36,7 @@ export default class BurgerMenu extends React.Component {
 
 const styles = {
     container: {
+        zIndex: 1000,
 		position: "absolute",
         left: 0,
         marginLeft: "-100%",
