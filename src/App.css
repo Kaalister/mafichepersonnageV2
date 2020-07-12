@@ -24,10 +24,6 @@
   color: white;
 }
 
-.backgroundHeader {
-  background-size: 100% 300px;
-}
-
 @font-face {
   font-family: "CloisterBlack";
   src: local("CloisterBlack"), url(./assets/font/CloisterBlack.ttf) format('truetype')

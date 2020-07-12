@@ -25,40 +25,32 @@ export default class Welcome extends React.Component {
     render() {
         return(
             <div style={{flex: 1}}>
-                <div style={styles.intro} className="littleText">Ce site te permettra de créer et d'éditer votre fiche de personnage de jeu de role.</div><br/>
-                <div style={styles.intro}className="littleText">Prenez par à l'aventure !!!</div>
-                <div style={styles.buttonArea}>
-                    <button style={styles.button} className="littleText" onClick={()=>{this.createNewCharacter()}}>Créer</button>
-                    <button style={styles.button} className="littleText" onClick={()=>{this.getFile()}}>Ouvrir</button>
+                <div className="littleText standard-text">
+                    Ce site te permettra de créer et d'éditer votre fiche de personnage de jeu de rôle.
+                </div><br/>
+                <div className="littleText standard-text">
+                    Prenez part à l'aventure !!!
                 </div>
-                <input name="myfile" type="file" id="inputFile" accept=".json" style={styles.input}/>
+                <div className="welcome-btn-area">
+                    <button
+                     className="littleText basic-btn"
+                     onClick={()=>{this.createNewCharacter()}}>
+                        Créer
+                    </button>
+                    <button
+                     className="littleText basic-btn"
+                     onClick={()=>{this.getFile()}}>
+                        Ouvrir
+                    </button>
+                </div>
+                <input
+                 name="myfile"
+                 type="file"
+                 id="inputFile"
+                 accept=".json"
+                 className="hidden"
+                />
             </div>
         )
     }
-}
-
-const styles = {
-    input: {
-        display: "none",
-    },
-    intro: {
-        fontSize: 35,
-        textAlign: "center",
-    },
-    button: {
-        fontSize: 30,
-        width: 100,
-        height: 60,
-        margin: 10,
-        padding: 5,
-        textAlign: "center",
-        borderRadius: 20,
-        color: "white",
-        backgroundColor: "#804d00",
-        borderColor: "black",
-    },
-    buttonArea: {
-        textAlign: "center",
-        marginTop: 100,
-    },
 }

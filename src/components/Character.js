@@ -7,50 +7,67 @@ export default class Character extends React.Component {
     }
 
     handleNotes = (note) => {
-        let newinfos = JSON.parse(JSON.stringify(this.state.infos));
+        let newinfos = {...this.state.infos};
 
         newinfos.Character.note = note.target.value;
-        this.setState({infos: newinfos}, this.props.setInfo(newinfos));
+        this.setState({ infos: newinfos }, this.props.setInfo(newinfos));
     }
 
     handleTab = (tab, event, index, name) => {
-        let newinfos = JSON.parse(JSON.stringify(this.state.infos));
+        let newinfos = {...this.state.infos};
+        let characState = this.state.infos.CharacterSettings.characteristic;
+        let statState = this.state.infos.CharacterSettings.statistic;
 
-        if (tab === "carac" && event - this.state.infos.CharacterSettings.characteristic[index].val <= 0) {
-            newinfos.Character.characteristic[index] = {name: name, val: event - this.state.infos.CharacterSettings.characteristic[index].val};
-        }
-        if (tab === "stat") {
-            newinfos.Character.statistic[index] = {name: name, val: event - this.state.infos.CharacterSettings.statistic[index].val};
-        }
+        if (tab === "carac" && event - characState[index].val <= 0)
+            newinfos.Character.characteristic[index] = {
+                name: name,
+                val: event - characState[index].val
+            };
+        if (tab === "stat")
+            newinfos.Character.statistic[index] = {
+                name: name,
+                val: event - statState[index].val
+            };
 
-        this.setState({infos: newinfos}, this.props.setInfo(newinfos));
+        this.setState({ infos: newinfos }, this.props.setInfo(newinfos));
     }
 
     render() {
-        let image, caracteristiques, competences, stats;
+        let image = require("../assets/images/avatar.jpg");
+        let caracState = this.state.infos.Character.characteristic;
+        let caracStateSettings = this.state.infos.CharacterSettings.characteristic;
+        let competenceState = this.state.infos.CharacterSettings.skill;
+        let statState = this.state.infos.Character.statistic;
+        let statStateSettings = this.state.infos.CharacterSettings.statistic;
+        let caracteristiques, competences, stats;
 
         if (this.state.infos.CharacterSettings.avatar !== "")
             image = this.state.infos.CharacterSettings.avatar;
-        else 
-            image = require("../assets/images/avatar.jpg");
         
-        caracteristiques = this.state.infos.Character.characteristic.map((obj, index) => {
+        caracteristiques = caracState.map((obj, index) => {
             return (
-                    <div style={styles.tabContainer} key={obj.name + "_" + index}>
-                        <div style={styles.tabCase} className="littleText">
+                    <div className="row" key={obj.name + "_" + index}>
+                        <div className="littleText tab-case">
                             - {obj.name} :
-                            <input type="number" style={styles.tabInput} className="littleText" value={obj.val + this.state.infos.CharacterSettings.characteristic[index].val} onChange={(e) => {this.handleTab("carac", e.target.value, index, obj.name)}}/> 
+                            <input
+                             type="number"
+                             className="littleText tab-input-nb"
+                             value={obj.val + caracStateSettings[index].val}
+                             onChange={(e) => {
+                                this.handleTab("carac", e.target.value, index, obj.name)
+                             }}
+                            /> 
                         </div>
                     </div>
                 );
         });
 
-        competences = this.state.infos.CharacterSettings.skill.map((obj, index) => {
+        competences = competenceState.map((obj, index) => {
             return (
-                    <div style={styles.tabContainer} key={obj.name + "_" + index}>
-                        <div style={styles.tabCase} className="littleText">
+                    <div className="row" key={obj.name + "_" + index}>
+                        <div className="littleText tab-case">
                             - {obj.name} : 
-                            <div style={styles.tabDesc}>
+                            <div className="tab-desc">
                                 {obj.desc} 
                             </div>
                         </div>
@@ -58,139 +75,82 @@ export default class Character extends React.Component {
                 );
         });
 
-        stats = this.state.infos.Character.statistic.map((obj, index) => {
+        stats = statState.map((obj, index) => {
             return (
-                <div style={styles.tabContainer} key={obj.name + "_" + index}>
-                <div style={styles.tabCase} className="littleText">
+                <div className="row" key={obj.name + "_" + index}>
+                <div className="littleText tab-case">
                     - {obj.name} :
-                    <input type="number" style={styles.tabInput} className="littleText" value={obj.val + this.state.infos.CharacterSettings.statistic[index].val} onChange={(e) => {this.handleTab("stat", e.target.value, index, obj.name)}}/> 
+                    <input
+                     type="number"
+                     className="littleText tab-input-nb"
+                     value={obj.val + statStateSettings[index].val}
+                     onChange={(e) => {
+                        this.handleTab("stat", e.target.value, index, obj.name)
+                     }}
+                    /> 
                 </div>
             </div>
                 );
         });
 
         return(
-            <div style={styles.container}>
-                <div style={styles.section} className="bigText">Personnage :</div>
-                <div style={styles.avatar}>
+            <div className="container wrapped row">
+                <div className="bigText section-title">Personnage :</div>
+
+                <div className="flex-1 row character-charac-picture-div">
                     <img
-                        src={image}
-                        alt=""
-                        style={styles.img}
-                        />
-                    <div style={styles.avatarDesc}>
-                        <div style={{display: "flex"}}>
-                            <div style={styles.text} className="littleText">{this.state.infos.CharacterSettings.firstName}</div>
-                            <div style={styles.text} className="littleText">{this.state.infos.CharacterSettings.lastName}</div>
+                     src={image}
+                     alt=""
+                     className="character-charac-picture"
+                    />
+
+                    <div className="character-desc-div">
+                        <div className="d-flex">
+                            <div className="littleText character-charac-text">
+                                {this.state.infos.CharacterSettings.firstName}
+                            </div>
+                            <div className="littleText character-charac-text">
+                                {this.state.infos.CharacterSettings.lastName}
+                            </div>
                         </div>
-                        <div style={styles.text} className="littleText">{this.state.infos.CharacterSettings.work}</div>
+                        <div  className="littleText character-charac-text">
+                            {this.state.infos.CharacterSettings.work}
+                        </div>
                         <div>
-                            <div style={styles.title} className="bigText">Caractéristiques :</div>
+                            <div className="bigText underpart-title">
+                                Caractéristiques :
+                            </div>
                             {caracteristiques}
                         </div>
                     </div>
+
                 </div>
-                <div style={styles.skills}>
-                    <div style={styles.title} className="bigText">Compétences :</div>
+
+                <div className="flex-1 character-skills-div">
+                    <div className="bigText underpart-title">Compétences :</div>
                     {competences}
                 </div>
-                <div style={{width: "100%"}}>
-                    <div style={styles.title} className="bigText">Biographie :</div>
-                    <div style={styles.longText} className="littleText">{this.state.infos.CharacterSettings.bio}</div>
+
+                <div className="full-width">
+                    <div className="bigText underpart-title">Biographie :</div>
+                    <div className="littleText character-charac-longtext">
+                        {this.state.infos.CharacterSettings.bio}
+                    </div>
                 </div>
-                <div style={{width: "100%"}}>
-                    <div style={styles.title} className="bigText">Statistiques :</div>
+                <div className="full-width">
+                    <div className="bigText underpart-title">
+                        Statistiques :
+                    </div>
                     {stats}
                 </div>
-                <div style={{width: "100%", marginBottom: 100}}>
-                    <div style={styles.title} className="bigText">Notes :</div>
-                    <textarea style={styles.longText} className="littleText" value={this.state.infos.Character.note} onChange={(e) => {this.handleNotes(e)}}></textarea>
+                <div className="full-width" style={{marginBottom: 100}}>
+                    <div className="bigText underpart-title">Notes :</div>
+                    <textarea
+                     className="littleText character-charac-longtext"
+                     value={this.state.infos.Character.note}
+                     onChange={(e) => {this.handleNotes(e)}}/>
                 </div>
             </div>
         )
-    }
-}
-
-const styles = {
-    avatarDesc: {
-        marginLeft: 30,
-        right: 0,
-    },
-    container: {
-        marginLeft: 50,
-        marginRight: 50,
-        flexWrap: "wrap",
-        flex: 1,
-        display: "flex",
-        flexDirecion: "row",
-        minHeight: "657px",
-    },
-    avatar: {
-        flex: 1,
-        display: "flex",
-        flexDirecion: "row",
-        minWidth: 560,
-        right: 0,
-    },
-    skills: {
-        selfAlign: "center",
-        flex: 1,
-        right: 0,
-        minWidth: 550,
-    },
-    img: {
-        left: 0,
-        height: 200,
-        width: 180,
-    },
-    title: {
-        marginTop: 10,
-        marginBottom: 10,
-        textDecoration: "underline",
-        fontSize: 35,
-    },
-    section: {
-        marginBottom: 30,
-        textDecoration: "underline",
-        fontSize: 40,
-        width: "100%",
-        textAlign: "center",
-    },
-    text: {
-        width: 180,
-        fontSize: 35,
-        marginTop: 10,
-        marginLeft: 5,
-        marginRight: 5,
-        textAlign: "center",
-    },
-    longText: {
-        width: "100%",
-        fontSize: 35,
-        marginTop: 10,
-        backgroundColor: "transparent",
-        border: "none",
-    },
-    tabContainer: {
-        display: "flex",
-        flexDirecion: "row",
-    },
-    tabCase: {
-        display: "flex",
-        marginTop: 10,
-        fontSize: 35,
-    },
-    tabInput: {
-        fontSize: 35,
-        backgroundColor: "transparent",
-        border: "none",
-        maxWidth: 100,
-        marginLeft:5,
-    },
-    tabDesc: {
-        fontSize: 35,
-        marginLeft: 5,
-        wrapText: "wrap",
-        maxWidth: 400,
     }
 }

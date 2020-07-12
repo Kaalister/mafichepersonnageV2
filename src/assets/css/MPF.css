@@ -1,0 +1,491 @@
+#Body {
+    flex: 1;
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+}
+
+.custom-bar:last-child>div>div {
+    background-color: rgba(134, 134, 134, 0.6)!important;
+}
+
+/* General */
+.section-title {
+    margin-bottom: 2rem;
+    text-decoration: underline;
+    font-size: 3rem;
+    width: 100%;
+    text-align: center;
+}
+
+.underpart-title {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    text-decoration: underline;
+    font-size: 2rem;
+}
+
+.centred {
+    align-self: center;
+}
+
+.container {
+    margin-left: 5rem;
+    margin-right: 5rem;
+    flex: 1;
+    text-align: center;
+}
+
+.on-work {
+    width: 100%;
+    font-size: 3rem;
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+}
+
+.little-circle-button {
+    height: 2rem;
+    width: 2rem;
+    font-size: 1rem;
+    border-radius: 1rem;
+    border-color: black;
+    color: white;
+    font-weight: bold;
+    align-self: center;
+    margin-left: 0.5rem;
+}
+
+.add-button {
+    background-color: #804d00;
+}
+
+.del-button {
+    background-color: #AD2E2E;
+}
+
+.hidden {
+    display: none;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapped {
+    flex-wrap: wrap;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.flex-1 {
+    flex: 1;
+}
+
+.flex-2 {
+    flex: 2;
+}
+
+.flex-3 {
+    flex: 3;
+}
+
+.flex-4 {
+    flex: 4;
+}
+
+.flex-5 {
+    flex: 5;
+}
+
+.character-charac-picture {
+    left: 0px;
+    width: 180px;
+    height: 200px;
+}
+
+.invisible-button {
+    border: none;
+    background-color: transparent;
+}
+
+.full-width{
+    width: 100%;
+}
+
+/* App.js */
+
+.current-page-container {
+    background-image : url(../images/mid.jpg);
+    flex: 10;
+    background-size: 100% 100%;
+}
+
+/* welcome.js */
+
+.basic-btn {
+    font-size: 2.5rem;
+    width: 7rem;
+    height: 3.5rem;
+    margin: 1rem;
+    text-align: center;
+    border-radius: 1rem;
+    color: white;
+    background-color: #804d00;
+    border-color: black;
+}
+
+.welcome-btn-area {
+    text-align: center;
+    margin-top: 10rem;
+}
+
+.standard-text {
+    font-size: 2rem;
+    text-align: center;
+}
+
+/* inventory.js */
+
+.inventory-input {
+    flex: 1;
+    font-size: 2.5rem;
+    margin: 0rem 0.5rem 0rem 0.5rem;
+    background-color: rgba(224, 167, 150, 0.4);
+    box-shadow: inset 0px 0px 5px #353535;
+    text-align: center;
+    color: white;
+    border: none;
+}
+
+.inventory-form {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.inventory-name {
+    max-width: 14.5rem;
+}
+
+.inventory-num {
+    max-width: 8.25rem;
+}
+
+.inventory-tab-cel {
+    flex: 1;
+    font-size: 2.5rem;
+    margin: 0px;
+    background-color: transparent;
+    text-align: center;
+    border: solid;
+    border-width: 1px;
+}
+
+.inventory-list-container>:first-child>div>input, .inventory-list-container>:first-child>div>div {
+    border-top-width: 2px;
+}
+
+.inventory-name-cel {
+    overflow-wrap: break-word;
+    max-width: 14.5rem;
+    border-left-width: 2px;
+}
+
+.inventory-num-cel {
+    max-width: 8.25rem;
+    border-right-width: 2px;
+}
+
+.inventory-list-container {
+    margin-top: 2rem;
+}
+
+/* header */
+
+.big-title {
+    align-self: center;
+    text-align: center;
+    flex: 1 1;
+    font-size: 3rem;
+}
+
+.header {
+    height: 25vh;
+    display: flex;
+    background-image: url(../images/top.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 25vh;
+}
+
+.header-button {
+    padding: 0;
+    margin: 0;
+    background-color: transparent;
+    border: none;
+    height: 12rem;
+}
+
+.menu-btn {
+    background-image: url(../images/marque_page.png);
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 40px;
+}
+
+.save-btn {
+    background-image: url(../images/rev_marque_page.png);
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 40px;
+    right: 0;
+}
+
+.header-button-text {
+    vertical-align: middle;
+    height: 90%;
+    font-size: 2rem;
+    flex: 1;
+}
+
+.vertical-left {
+    writing-mode: vertical-rl;
+}
+
+.vertical-right {
+    writing-mode: vertical-rl;
+    transform: rotateZ(180deg);
+}
+
+/* equipement */
+.equipment-container-list {
+    margin-bottom: 2rem;
+    flex-direction: row;
+    display: flex;
+    max-width: 100%;
+    flex-wrap: wrap;
+}
+
+.equipment-input-container {
+    height: 13rem;
+    width: 13rem;
+    flex-direction: column;
+    display: flex;
+}
+
+.equipment-img-container {
+    height: 13rem;
+    width: 13rem;
+    flex-direction: column;
+    display: flex;
+}
+
+.equipment-img {
+    height: 13rem;
+    width: 13rem;
+}
+
+.equipment-input-name {
+    font-size: 2rem;
+    width: 10rem;
+    background-color: rgba(224, 167, 150, 0.4);
+    box-shadow: inset 0px 0px 5px #353535;
+    text-align: center;
+    color: white;
+    border: none;
+    margin-left: 0.5rem;
+}
+
+.equipment-input-desc {
+    margin-top: 0.5rem;
+    font-size: 1.5rem;
+    margin-left: 0.5rem;
+    background-color: rgba(224, 167, 150, 0.4);
+    box-shadow: inset 0px 0px 5px #353535;
+    color: white;
+    border: none;
+    resize: none;
+    flex: 1;
+}
+
+.equipment-name {
+    text-align: center;
+    font-size: 2rem;
+    width: 10rem;
+    margin-left: 0.5rem;
+    border: none;
+    text-overflow: ellipsis;
+    overflow-x: hidden;
+}
+
+.equipment-desc {
+    font-size: 1.5rem;
+    border: none;
+    flex: 1;
+    word-wrap: break-word;
+    width: 12rem;
+    height: 11rem;
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+}
+
+.equipment-desc::-webkit-scrollbar {
+    display: none;
+}
+
+.equipment-item-cel {
+    margin-left: 0.5rem;
+    margin-bottom: 0.5rem;
+    box-shadow: 1px 0px 3px rgb(25, 25, 25);
+    border-radius: 1rem;
+}
+
+/* CharacterSettings.js */
+
+.character-charac {
+    min-width: 550px;
+    right: 0;
+}
+
+.character-desc-div {
+    margin-left: 1rem;
+    right: 0;
+}
+
+.character-skills-div {
+    right: 0;
+    min-width: 550px;
+}
+
+.input-number {
+    font-size: 2rem;
+    max-width: 100px;
+    margin: 10px 5px auto 5px;
+    background-color: rgba(224, 167, 150, 0.4);
+    box-shadow: inset 0px 0px 5px #353535;
+    text-align: center;
+    color: white;
+    border: none;
+}
+
+.input-text {
+    max-width: 200px;
+    font-size: 2rem;
+    margin: 10px 5px auto 5px;
+    background-color: rgba(224, 167, 150, 0.4);
+    box-shadow: inset 0px 0px 5px #353535;
+    text-align: center;
+    color: white;
+    border: none;
+}
+
+.input-textarea {
+    width: 100%;
+    font-size: 2rem;
+    margin-top: 10px;
+    background-color: rgba(224, 167, 150, 0.4);
+    box-shadow: inset 0px 0px 5px #353535;
+    color: white;
+    border: none;
+}
+
+.tab-case {
+    margin-top: 10px;
+    font-size: 2rem;
+    display: flex;
+}
+
+.tab-desc {
+    font-size: 2rem;
+    margin-left: 5px;
+    word-wrap: break-word;
+    max-width: 400px;
+}
+
+.tab-input-nb {
+    font-size: 2rem;
+    background-color: Transparent;
+    border: none;
+    max-width: 100px;
+    margin-left: 5px;
+}
+
+/* character.js */
+
+.character-charac-picture-div {
+    min-width: 560;
+    right: 0;
+}
+
+.character-charac-text {
+    width: 180px;
+    font-size: 2rem;
+    margin: 10px 5px auto 5px;
+    text-align: center;
+}
+
+.character-charac-longtext {
+    width: 100%;
+    font-size: 2rem;
+    margin-top: 10px;
+    background-color: transparent;
+    border: none;
+}
+
+/* bugermenu */
+.burgermenu-container {
+    z-index: 100;
+	position: absolute;
+    left: 0;
+    margin-left: -100%;
+    background-color: rgba(0, 0, 0, 0.43);
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+}
+
+.burgermenu {
+    background-image: url(../images/base.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 500px;
+    height: 100vh;
+    box-shadow: 30px 30px 61px #000, 
+                -30px -30px 61px #000;
+}
+
+.exit-burgermenu {
+    padding: 0;
+    margin: 0;
+    height: 200px;
+    background-color: transparent;
+    border: none;
+}
+
+.exit-burgermenu>div {
+    background-image: url(../images/marque_page.png);
+    background-repeat: no-repeat;
+    height: 200px;
+    width: 50px;
+}
+
+.exit-burgermenu>div>div {
+    vertical-align: middle;
+    height: 90%;
+    writing-mode: vertical-rl;
+    font-size: 30px;
+    flex: 1;
+}
+
+.burgermenu-list-menu {
+    padding-top: 100px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
