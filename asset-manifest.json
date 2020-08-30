@@ -1,34 +1,33 @@
 {
   "files": {
-    "main.css": "/mafichepersonnageV2/static/css/main.1ea69cb1.chunk.css",
-    "main.js": "/mafichepersonnageV2/static/js/main.fd2a4393.chunk.js",
-    "main.js.map": "/mafichepersonnageV2/static/js/main.fd2a4393.chunk.js.map",
+    "main.css": "/mafichepersonnageV2/static/css/main.a837d4e2.chunk.css",
+    "main.js": "/mafichepersonnageV2/static/js/main.91d9f367.chunk.js",
+    "main.js.map": "/mafichepersonnageV2/static/js/main.91d9f367.chunk.js.map",
     "runtime-main.js": "/mafichepersonnageV2/static/js/runtime-main.22792ec2.js",
     "runtime-main.js.map": "/mafichepersonnageV2/static/js/runtime-main.22792ec2.js.map",
-    "static/js/2.fbc7f138.chunk.js": "/mafichepersonnageV2/static/js/2.fbc7f138.chunk.js",
-    "static/js/2.fbc7f138.chunk.js.map": "/mafichepersonnageV2/static/js/2.fbc7f138.chunk.js.map",
+    "static/js/2.90dbea84.chunk.js": "/mafichepersonnageV2/static/js/2.90dbea84.chunk.js",
+    "static/js/2.90dbea84.chunk.js.map": "/mafichepersonnageV2/static/js/2.90dbea84.chunk.js.map",
     "index.html": "/mafichepersonnageV2/index.html",
-    "precache-manifest.1cf399c32323bf8add42c34f667be296.js": "/mafichepersonnageV2/precache-manifest.1cf399c32323bf8add42c34f667be296.js",
+    "precache-manifest.322ef935f81694ef4e3bc109f79bdea0.js": "/mafichepersonnageV2/precache-manifest.322ef935f81694ef4e3bc109f79bdea0.js",
     "service-worker.js": "/mafichepersonnageV2/service-worker.js",
-    "static/css/main.1ea69cb1.chunk.css.map": "/mafichepersonnageV2/static/css/main.1ea69cb1.chunk.css.map",
-    "static/js/2.fbc7f138.chunk.js.LICENSE.txt": "/mafichepersonnageV2/static/js/2.fbc7f138.chunk.js.LICENSE.txt",
+    "static/css/main.a837d4e2.chunk.css.map": "/mafichepersonnageV2/static/css/main.a837d4e2.chunk.css.map",
+    "static/js/2.90dbea84.chunk.js.LICENSE.txt": "/mafichepersonnageV2/static/js/2.90dbea84.chunk.js.LICENSE.txt",
     "static/media/Blacksword.otf": "/mafichepersonnageV2/static/media/Blacksword.a9053120.otf",
     "static/media/CloisterBlack.ttf": "/mafichepersonnageV2/static/media/CloisterBlack.d15613cd.ttf",
     "static/media/OldeEnglish.ttf": "/mafichepersonnageV2/static/media/OldeEnglish.713ad647.ttf",
     "static/media/avatar.jpg": "/mafichepersonnageV2/static/media/avatar.283e56f9.jpg",
-    "static/media/base.jpg": "/mafichepersonnageV2/static/media/base.08b60efc.jpg",
-    "static/media/foot.png": "/mafichepersonnageV2/static/media/foot.b5898e94.png",
-    "static/media/hand.png": "/mafichepersonnageV2/static/media/hand.20480025.png",
-    "static/media/headset.png": "/mafichepersonnageV2/static/media/headset.3688efc8.png",
     "static/media/MPF.css": "/mafichepersonnageV2/static/media/top.17d52e9b.jpg",
-    "static/media/pants.png": "/mafichepersonnageV2/static/media/pants.ac9dc9d6.png",
-    "static/media/plastron.png": "/mafichepersonnageV2/static/media/plastron.4c974c2c.png",
-    "static/media/weapon.png": "/mafichepersonnageV2/static/media/weapon.24254220.png"
+    "static/media/foot.png": "/mafichepersonnageV2/static/media/foot.4815491e.png",
+    "static/media/hand.png": "/mafichepersonnageV2/static/media/hand.050f4b3d.png",
+    "static/media/headset.png": "/mafichepersonnageV2/static/media/headset.793e0e04.png",
+    "static/media/pants.png": "/mafichepersonnageV2/static/media/pants.3f5f4461.png",
+    "static/media/plastron.png": "/mafichepersonnageV2/static/media/plastron.ba5fa56a.png",
+    "static/media/weapon.png": "/mafichepersonnageV2/static/media/weapon.b380dc63.png"
   },
   "entrypoints": [
     "static/js/runtime-main.22792ec2.js",
-    "static/js/2.fbc7f138.chunk.js",
-    "static/css/main.1ea69cb1.chunk.css",
-    "static/js/main.fd2a4393.chunk.js"
+    "static/js/2.90dbea84.chunk.js",
+    "static/css/main.a837d4e2.chunk.css",
+    "static/js/main.91d9f367.chunk.js"
   ]
 }
