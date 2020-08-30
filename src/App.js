@@ -17,7 +17,7 @@ import Tutorial from './components/Tutorial';
 export default class App extends React.Component {
 	state = {
 		infos: null,
-		page: "Character",
+		page: "CharacterSettings",
 		Burger: false,
 	}
 
@@ -38,24 +38,18 @@ export default class App extends React.Component {
 
 	render () {
 		let contents;
-		let size = 0;
-
-		if (document.getElementById("Body")) {
-			size = document.getElementById("Body").offsetHeight;
-		}
 
 		if (this.state.infos == null) {
-			contents =	<div className="current-page-container">
+			contents =	<div id="current-page" className="current-page-container">
 							<Welcome
 							 infos={this.infos}
 							 setInfo={this.setInfo}
-							 height={size}
 							/>
 						</div>;
 		} else {
 			switch (this.state.page) {
 				case "Character":
-					contents =	<div className="current-page-container">
+					contents =	<div id="current-page" className="current-page-container">
     								<Character
 										infos={this.state.infos}
 										setInfo={this.setInfo}
@@ -64,7 +58,7 @@ export default class App extends React.Component {
 					break;
 				default:
 				case "CharacterSettings":
-					contents = 	<div className="current-page-container">
+					contents = 	<div id="current-page" className="current-page-container">
 									<CharacterSettings
 										infos={this.state.infos}
 										setInfo={this.setInfo}
@@ -72,7 +66,7 @@ export default class App extends React.Component {
 								</div>;
 					break;
 				case "Equipment":
-					contents = 	<div className="current-page-container">
+					contents = 	<div id="current-page" className="current-page-container">
 									<Equipment
 										infos={this.state.infos}
 										setInfo={this.setInfo}
@@ -80,7 +74,7 @@ export default class App extends React.Component {
 								</div>;
 					break;
 				case "Inventory":
-					contents = 	<div className="current-page-container">
+					contents = 	<div id="current-page" className="current-page-container">
 									<Inventory
 										infos={this.state.infos}
 										setInfo={this.setInfo}
@@ -88,19 +82,21 @@ export default class App extends React.Component {
 								</div>;
 					break;
 				case "Tutorial":
-					contents = 	<div className="current-page-container">
+					contents = 	<div id="current-page" className="current-page-container">
 									<Tutorial
 									/>
 								</div>;
 					break;
 				case "Settings":
-					contents = 	<div className="current-page-container">
+					contents = 	<div id="current-page" className="current-page-container">
 									<Settings
 									/>
 								</div>;
 					break;
 			}
 		}
+
+
 		return(
 			<Scrollbars className="custom-bar" autoHide>
 				<div id="Body">
@@ -110,7 +106,6 @@ export default class App extends React.Component {
 					 Burger={this.state.Burger}
 					 setBurger={this.setBurger}
 					 setPage={this.setPage}
-					 height={size}
 					/>
 					<Header
 					 infos={this.state.infos}

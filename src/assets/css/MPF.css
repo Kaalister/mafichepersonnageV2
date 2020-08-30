@@ -20,8 +20,7 @@
 
 .underpart-title {
     margin-top: 1rem;
-    margin-bottom: 1rem;
-    text-decoration: underline;
+    margin-bottom: 1.5rem;
     font-size: 2rem;
 }
 
@@ -34,6 +33,7 @@
     margin-right: 5rem;
     flex: 1;
     text-align: center;
+    margin-bottom: 200px;
 }
 
 .on-work {
@@ -53,6 +53,7 @@
     font-weight: bold;
     align-self: center;
     margin-left: 0.5rem;
+    padding: 0px;
 }
 
 .add-button {
@@ -105,6 +106,14 @@
     flex: 5;
 }
 
+.space-btw {
+    justify-content: space-between;
+}
+
+.text-left {
+    text-align: left;
+}
+
 .character-charac-picture {
     left: 0px;
     width: 180px;
@@ -118,6 +127,10 @@
 
 .full-width{
     width: 100%;
+}
+
+.underline {
+    text-decoration: underline;
 }
 
 /* App.js */
@@ -140,6 +153,7 @@
     color: white;
     background-color: #804d00;
     border-color: black;
+    padding: 0px;
 }
 
 .welcome-btn-area {
@@ -171,6 +185,7 @@
 }
 
 .inventory-name {
+    border-radius: 0px;
     max-width: 14.5rem;
 }
 
@@ -188,19 +203,48 @@
     border-width: 1px;
 }
 
-.inventory-list-container>:first-child>div>input, .inventory-list-container>:first-child>div>div {
+.inventory-list-container>:first-child>.inventory-name-cel {
+    border-top-left-radius: 20px;
+}
+
+.inventory-list-container>:first-child>.inventory-num-cel {
+    border-top-right-radius: 20px;
+}
+
+.inventory-list-container>:last-child>.inventory-name-cel {
+    border-bottom-left-radius: 20px;
+}
+
+.inventory-list-container>:last-child>.inventory-num-cel {
+    border-bottom-right-radius: 20px;
+}
+
+.inventory-list-container>:first-child>.inventory-tab-cel {
     border-top-width: 2px;
 }
 
+.inventory-list-container>:last-child>.inventory-tab-cel {
+    border-bottom-width: 2px;
+}
+
 .inventory-name-cel {
+    border-left-width: 2px;
+    border-radius: 0px;
     overflow-wrap: break-word;
     max-width: 14.5rem;
-    border-left-width: 2px;
+}
+
+.inventory-desc-cel {
+    border-color: black;
+    flex: 2;
+    overflow-wrap: break-word;
+    border-radius: 0px;
 }
 
 .inventory-num-cel {
-    max-width: 8.25rem;
     border-right-width: 2px;
+    border-radius: 0px;
+    max-width: 8.25rem;
 }
 
 .inventory-list-container {
@@ -245,6 +289,7 @@
     height: 100%;
     width: 40px;
     right: 0;
+    color: black;
 }
 
 .header-button-text {
@@ -291,9 +336,19 @@
     width: 13rem;
 }
 
+.equiped-equipement-list {
+    overflow: hidden;
+    flex-wrap: wrap;
+}
+
+.equipment-input-container-w-img {
+    min-width: 300px;
+}
+
 .equipment-input-name {
     font-size: 2rem;
-    width: 10rem;
+    flex: 1;
+    min-width: 120px;
     background-color: rgba(224, 167, 150, 0.4);
     box-shadow: inset 0px 0px 5px #353535;
     text-align: center;
@@ -344,6 +399,9 @@
     margin-bottom: 0.5rem;
     box-shadow: 1px 0px 3px rgb(25, 25, 25);
     border-radius: 1rem;
+    max-width: 210px;
+    max-height: 210px;
+    margin: 10px 5px;
 }
 
 /* CharacterSettings.js */
@@ -393,6 +451,7 @@
     box-shadow: inset 0px 0px 5px #353535;
     color: white;
     border: none;
+    padding: 0px;
 }
 
 .tab-case {
@@ -402,10 +461,11 @@
 }
 
 .tab-desc {
+    text-align: left;
+    margin-top: 10px;
     font-size: 2rem;
-    margin-left: 5px;
+    margin-left: 1rem;
     word-wrap: break-word;
-    max-width: 400px;
 }
 
 .tab-input-nb {
@@ -414,6 +474,8 @@
     border: none;
     max-width: 100px;
     margin-left: 5px;
+    height: 2rem;
+    padding: 0px;
 }
 
 /* character.js */
@@ -426,7 +488,7 @@
 .character-charac-text {
     width: 180px;
     font-size: 2rem;
-    margin: 10px 5px auto 5px;
+    margin: 10px auto auto auto;
     text-align: center;
 }
 
@@ -439,18 +501,37 @@
 }
 
 /* bugermenu */
+
+.burgermenu-overlay{
+    position: absolute;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100vw;
+    min-height: 100%;
+    opacity: 0;
+    z-index: -100;
+    transition: all 0.5s ease;
+}
+
 .burgermenu-container {
     z-index: 100;
 	position: absolute;
-    left: 0;
-    margin-left: -100%;
-    background-color: rgba(0, 0, 0, 0.43);
-    width: 100vw;
+    left: -600px;
+    width: 550px;
     min-height: 100vh;
     display: flex;
+    transition: all 0.5s ease;
+}
+
+.activate {
+    z-index: 100;
+    left: 0;
+    display: flex;
+    opacity: 1;
 }
 
 .burgermenu {
+    border-bottom-right-radius: 30px;
     background-image: url(../images/base.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -466,6 +547,7 @@
     height: 200px;
     background-color: transparent;
     border: none;
+    color: black
 }
 
 .exit-burgermenu>div {

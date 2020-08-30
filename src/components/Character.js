@@ -48,10 +48,12 @@ export default class Character extends React.Component {
             return (
                     <div className="row" key={obj.name + "_" + index}>
                         <div className="littleText tab-case">
-                            - {obj.name} :
+                            <div className="underline">
+                                - {obj.name} :
+                            </div>
                             <input
                              type="number"
-                             className="littleText tab-input-nb"
+                             className="littleText tab-input-nb no-underline"
                              value={obj.val + caracStateSettings[index].val}
                              onChange={(e) => {
                                 this.handleTab("carac", e.target.value, index, obj.name)
@@ -64,12 +66,12 @@ export default class Character extends React.Component {
 
         competences = competenceState.map((obj, index) => {
             return (
-                    <div className="row" key={obj.name + "_" + index}>
-                        <div className="littleText tab-case">
+                    <div className="column" key={obj.name + "_" + index}>
+                        <div className="littleText tab-case underline">
                             - {obj.name} : 
-                            <div className="tab-desc">
-                                {obj.desc} 
-                            </div>
+                        </div>
+                        <div className="littleText tab-desc">
+                            {obj.desc} 
                         </div>
                     </div>
                 );
@@ -79,7 +81,9 @@ export default class Character extends React.Component {
             return (
                 <div className="row" key={obj.name + "_" + index}>
                 <div className="littleText tab-case">
-                    - {obj.name} :
+                    <div className="underline">
+                        - {obj.name} :
+                    </div>
                     <input
                      type="number"
                      className="littleText tab-input-nb"
@@ -97,53 +101,55 @@ export default class Character extends React.Component {
             <div className="container wrapped row">
                 <div className="bigText section-title">Personnage :</div>
 
-                <div className="flex-1 row character-charac-picture-div">
-                    <img
-                     src={image}
-                     alt=""
-                     className="character-charac-picture"
-                    />
+                <div>
+                    <div className="flex-1 row character-charac-picture-div">
+                        <img
+                         src={image}
+                         alt=""
+                         className="character-charac-picture"
+                        />
 
-                    <div className="character-desc-div">
-                        <div className="d-flex">
-                            <div className="littleText character-charac-text">
-                                {this.state.infos.CharacterSettings.firstName}
+                        <div className="character-desc-div">
+                            <div className="d-flex">
+                                <div className="littleText character-charac-text">
+                                    {this.state.infos.CharacterSettings.firstName}
+                                </div>
+                                <div className="littleText character-charac-text">
+                                    {this.state.infos.CharacterSettings.lastName}
+                                </div>
                             </div>
-                            <div className="littleText character-charac-text">
-                                {this.state.infos.CharacterSettings.lastName}
+                            <div  className="littleText character-charac-text">
+                                {this.state.infos.CharacterSettings.work}
                             </div>
-                        </div>
-                        <div  className="littleText character-charac-text">
-                            {this.state.infos.CharacterSettings.work}
-                        </div>
-                        <div>
-                            <div className="bigText underpart-title">
-                                Caractéristiques :
-                            </div>
-                            {caracteristiques}
                         </div>
                     </div>
 
+                    <div>
+                        <div className="bigText underpart-title text-left">
+                            Caractéristiques :
+                        </div>
+                        {caracteristiques}
+                    </div>
                 </div>
 
-                <div className="flex-1 character-skills-div">
+                <div className="flex-1 character-skills-div text-left">
                     <div className="bigText underpart-title">Compétences :</div>
                     {competences}
                 </div>
 
-                <div className="full-width">
+                <div className="full-width text-left">
                     <div className="bigText underpart-title">Biographie :</div>
                     <div className="littleText character-charac-longtext">
                         {this.state.infos.CharacterSettings.bio}
                     </div>
                 </div>
                 <div className="full-width">
-                    <div className="bigText underpart-title">
+                    <div className="bigText underpart-title text-left">
                         Statistiques :
                     </div>
                     {stats}
                 </div>
-                <div className="full-width" style={{marginBottom: 100}}>
+                <div className="full-width text-left" style={{marginBottom: 100}}>
                     <div className="bigText underpart-title">Notes :</div>
                     <textarea
                      className="littleText character-charac-longtext"

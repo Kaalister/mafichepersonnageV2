@@ -202,7 +202,7 @@ export default class CharacterSettings extends React.Component {
         
         caracteristiques = caracState.map((obj, index) => {
             return (
-                <div className="row" key={obj.name + "_" + index}>
+                <div className="row" key={obj.name + "_" + index + "_carac"}>
                     <div className="littleText tab-case">
                     {"- " + obj.name + " : "}  
                         <input type="number"
@@ -225,26 +225,29 @@ export default class CharacterSettings extends React.Component {
 
         competences = competencesState.map((obj, index) => {
             return (
-                <div className="row" key={obj.name + "_" + index}>
-                    <div className="littleText tab-case">
-                        {"- " + obj.name + " : "} 
-                        <div className="littleText tab-desc">
-                            {obj.desc} 
+                <div>
+                    <div className="row space-btw"
+                     key={obj.name + "_" + index + "_comp"}>
+                        <div className="littleText tab-case">
+                            {"- " + obj.name + " : "} 
                         </div>
+                        <button
+                         className="little-circle-button del-button"
+                         onClick={()=> {this.removeFromTab(index, "comp")}}
+                        >
+                            -
+                        </button>
                     </div>
-                    <button
-                     className="little-circle-button del-button"
-                     onClick={()=> {this.removeFromTab(index, "comp")}}
-                    >
-                        -
-                    </button>
+                    <div className="littleText tab-desc">
+                    {obj.desc} 
+                    </div>
                 </div>
             );
         });
 
         stats = statsState.map((obj, index) => {
             return (
-                <div className="row" key={obj.name + "_" + index}>
+                <div className="row" key={obj.name + "_" + index + "_state"}>
                     <div className="littleText tab-case">
                         {"- " + obj.name + " : "} 
                         <input
@@ -271,93 +274,93 @@ export default class CharacterSettings extends React.Component {
                     Options Personnage :
                 </div>
 
-                <div className="flex-1 row character-charac">
-                    <input
-                     type="file"
-                     id="inputImg"
-                     className="hidden"
-                     alt=""
-                     accept=".jpg,.png"
-                    />
-                    <button
-                     className="clickable invisible-button"
-                     onClick={() => { this.handleImg() }}
-                    >
-                        <img
-                         src={image}
+                <div className="flex-1 row character-charac column">
+                    <div className="row">
+                        <input
+                         type="file"
+                         id="inputImg"
+                         className="hidden"
                          alt=""
-                         className="character-charac-picture"
+                         accept=".jpg,.png"
                         />
-                    </button>
+                        <button
+                         className="clickable invisible-button"
+                         onClick={() => { this.handleImg() }}
+                        >
+                            <img
+                             src={image}
+                             alt=""
+                             className="character-charac-picture"
+                            />
+                        </button>
 
-                    <div className="character-desc-div">
-                        <input
-                         type="text"
-                         placeholder="Prénom"
-                         onChange={(data) => {
-                            this.handleFirstName(data)
-                         }}
-                         className="littleText input-text"
-                         value={this.state.infos.CharacterSettings.firstName}
-                        />
-                        <input
-                         type="text"
-                         placeholder="Nom"
-                         onChange={(data) => {
-                            this.handleLastName(data)
-                         }}
-                         className="littleText input-text"
-                         value={this.state.infos.CharacterSettings.lastName}
-                        />
-                        <br/>
-                        <input
-                         type="text"
-                         placeholder="Métier / Race" 
-                         onChange={(data) => {
-                            this.handleWork(data)
-                         }}
-                         className="littleText input-text"
-                         value={this.state.infos.CharacterSettings.work}
-                        />
-
-                        <div>
-                            <div className="bigText underpart-title">
-                                Caractéristiques :
-                            </div>
+                        <div className="character-desc-div flex-1">
+                            <input
+                             type="text"
+                             placeholder="Prénom"
+                             onChange={(data) => {
+                                this.handleFirstName(data)
+                             }}
+                             className="littleText input-text"
+                             value={this.state.infos.CharacterSettings.firstName}
+                            />
                             <input
                              type="text"
                              placeholder="Nom"
                              onChange={(data) => {
-                                this.handleCaracName(data)
+                                this.handleLastName(data)
                              }}
                              className="littleText input-text"
-                             value={this.state.caracName}
+                             value={this.state.infos.CharacterSettings.lastName}
                             />
-                            :
+                            <br/>
                             <input
-                             type="number"
-                             placeholder="Valeur" 
+                             type="text"
+                             placeholder="Métier / Race" 
                              onChange={(data) => {
-                                this.handleCaracVal(data)
+                                this.handleWork(data)
                              }}
-                             className="littleText input-number"
-                             value={this.state.caracVal}
+                             className="littleText input-text"
+                             value={this.state.infos.CharacterSettings.work}
                             />
-                            <button
-                             className="little-circle-button add-button"
-                             onClick={() => {this.handleAddCarac()}}
-                            >
-                                +
-                            </button>
-                            <div>
-                                {caracteristiques}
-                            </div>
                         </div>
                     </div>
-
+                    <div className="text-left">
+                        <div className="bigText underpart-title">
+                            Caractéristiques :
+                        </div>
+                        <input
+                         type="text"
+                         placeholder="Nom"
+                         onChange={(data) => {
+                            this.handleCaracName(data)
+                         }}
+                         className="littleText input-text"
+                         value={this.state.caracName}
+                        />
+                        :
+                        <input
+                         type="number"
+                         placeholder="Valeur" 
+                         onChange={(data) => {
+                            this.handleCaracVal(data)
+                         }}
+                         className="littleText input-number"
+                         value={this.state.caracVal}
+                        />
+                        <button
+                         className="little-circle-button add-button"
+                         onClick={() => {this.handleAddCarac()}}
+                        >
+                            +
+                        </button>
+                        <div>
+                            {caracteristiques}
+                        </div>
+                    </div>
                 </div>
 
-                <div className="flex-1 character-skills-div">
+                <div className="flex-1 character-skills-div text-left">
                     <div className="bigText underpart-title">Compétences :</div>
                     <input
                      type="text"
@@ -389,7 +392,7 @@ export default class CharacterSettings extends React.Component {
                     </div>
                 </div>
 
-                <div className="full-width">
+                <div className="full-width text-left">
                     <div className="bigText underpart-title">Biographie :</div>
                     <textarea
                      className="littleText input-textarea"
@@ -397,7 +400,7 @@ export default class CharacterSettings extends React.Component {
                      value={this.state.infos.CharacterSettings.bio}
                     />
                 </div>
-                <div className="full-width" style={{ marginBottom: 100 }}>
+                <div className="full-width text-left" style={{ marginBottom: 100 }}>
                     <div className="bigText underpart-title">
                         Statistiques :
                     </div>

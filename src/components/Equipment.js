@@ -19,52 +19,12 @@ export default class Equipment extends React.Component {
         weapon: { name: "", desc: "" },
     }
 
-    handleInputHeadset = (source, text) => {
-        let headset = {...this.state.headset};
+    handleInputEquipment = (type, source, text) => {
+        let equipment = {...this.state[type]}
 
-        headset[source] = text;
+        equipment[source] = text;
 
-        this.setState({headset: headset})
-    }
-    
-    handleInputPlastron = (source, text) => {
-        let plastron = {...this.state.plastron};
-
-        plastron[source] = text;
-
-        this.setState({plastron: plastron})
-    }
-
-    handleInputHand = (source, text) => {
-        let hand = {...this.state.hand};
-
-        hand[source] = text;
-
-        this.setState({hand: hand})
-    }
-
-    handleInputPants = (source, text) => {
-        let pants = {...this.state.pants};
-
-        pants[source] = text;
-
-        this.setState({pants: pants})
-    }
-
-    handleInputFoot = (source, text) => {
-        let foot = {...this.state.foot};
-
-        foot[source] = text;
-
-        this.setState({foot: foot});
-    }
-
-    handleInputWeapon = (source, text) => {
-        let weapon = {...this.state.weapon};
-
-        weapon[source] = text;
-
-        this.setState({weapon: weapon});
+        this.setState({[type]: equipment});
     }
 
     delEquipment = (source, id) => {
@@ -173,7 +133,7 @@ export default class Equipment extends React.Component {
                 }, this.props.setInfo(copy));
                 break;
             case "foot":
-                if (this.state.foot.name === "" || this.state.foot.desc == "")
+                if (this.state.foot.name === "" || this.state.foot.desc === "")
                     return;
                 copy.Equipment.foots.push({
                     name: this.state.foot.name,
@@ -202,6 +162,50 @@ export default class Equipment extends React.Component {
             default:
                 break;
         }
+    }
+
+    createEquipementInput = (type, img, value, listElem) => {
+        return (
+            <div className="equipment-container-list">
+                <div className="row equipment-input-container-w-img">
+                    <div className="equipment-img-container">
+                        <img
+                         src={img}
+                         alt=""
+                         className="equipment-img"
+                         />
+                    </div>
+                    <div className="equipment-input-container">
+                        <div className="row">
+                            <input
+                             className="littleText equipment-input-name"
+                             onChange={(e) => {
+                                this.handleInputEquipment(type, "name", e.target.value)
+                             }}
+                             value={value.name}
+                             placeholder="Name"
+                             />
+                            <button
+                             className="little-circle-button add-button"
+                             onClick={() => {this.addEquipment(type)}}>
+                                +
+                            </button>
+                        </div>
+                        <textarea
+                         className="littleText equipment-input-desc"
+                         onChange={(e) => {
+                            this.handleInputEquipment(type, "desc", e.target.value)
+                         }}
+                         value={value.desc}
+                         placeholder="Description"
+                        />
+                    </div>
+                </div>
+                <div className="equiped-equipement-list row flex-1">
+                    {listElem}
+                </div>
+            </div>
+        )
     }
 
     render() {
@@ -325,231 +329,22 @@ export default class Equipment extends React.Component {
                 <div className="column">
 
                     {/* head */}
-                    <div className="equipment-container-list">
-                        <div className="equipment-img-container">
-                            <img
-                                src={headsetImg}
-                                alt=""
-                                className="equipment-img"
-                                />
-                        </div>
-                        <div className="equipment-input-container">
-                            <div className="row">
-                                <input
-                                 className="littleText equipment-input-name"
-                                 onChange={(e) => {
-                                    this.handleInputHeadset("name", e.target.value)
-                                 }}
-                                 value={this.state.headset.name}
-                                 placeholder="Name"
-                                />
-                                <button
-                                 className="little-circle-button add-button"
-                                 onClick={() => {this.addEquipment("headset")}}>
-                                    +
-                                </button>
-                            </div>
-                            <textarea
-                             className="littleText equipment-input-desc"
-                             onChange={(e) => {
-                                this.handleInputHeadset("desc", e.target.value)
-                             }}
-                             value={this.state.headset.desc}
-                             placeholder="Description"
-                            />
-                        </div>
-                        {headsets}
-                    </div>
+                    {this.createEquipementInput("headset", headsetImg, this.state.headset, headsets)}
 
                     {/* plastron */}
-                    <div className="equipment-container-list">
-                        <div className="equipment-img-container">
-                            <img
-                             src={plastronImg}
-                             alt=""
-                             className="equipment-img"
-                            />
-                        </div>
-                        <div className="equipment-input-container">
-                            <div className="row">
-                                <input
-                                 className="littleText equipment-input-name"
-                                 onChange={(e) => {
-                                    this.handleInputPlastron("name", e.target.value)
-                                 }}
-                                 value={this.state.plastron.name}
-                                 placeholder="Name"
-                                />
-                                <button
-                                 className="little-circle-button add-button"
-                                 onClick={() => {this.addEquipment("plastron")}}
-                                >
-                                    +
-                                </button>
-                            </div>
-                            <textarea
-                             className="littleText equipment-input-desc"
-                             onChange={(e) => {
-                                this.handleInputPlastron("desc", e.target.value)
-                             }}
-                             value={this.state.plastron.desc}
-                             placeholder="Description"
-                            />
-                        </div>
-                        {plastrons}
-                    </div>
+                    {this.createEquipementInput("plastron", plastronImg, this.state.plastron, plastrons)}
 
                     {/* hand */}
-                    <div className="equipment-container-list">
-                        <div className="equipment-img-container">
-                            <img
-                             src={handImg}
-                             alt=""
-                             className="equipment-img"
-                            />
-                        </div>
-                        <div className="equipment-input-container">
-                            <div className="row">
-                                <input
-                                 className="littleText equipment-input-name"
-                                 onChange={(e) => {
-                                    this.handleInputHand("name", e.target.value)
-                                 }} 
-                                 value={this.state.hand.name} 
-                                 placeholder="Name"
-                                />
-                                <button
-                                 className="little-circle-button add-button"
-                                 onClick={() => {this.addEquipment("hand")}}
-                                >
-                                    +
-                                </button>
-                            </div>
-                            <textarea
-                             className="littleText equipment-input-desc"
-                             onChange={(e) => {
-                                this.handleInputHand("desc", e.target.value)
-                             }}
-                             value={this.state.hand.desc}
-                             placeholder="Description"
-                            />
-                        </div>
-                        {hands}
-                    </div>
+                    {this.createEquipementInput("hand", handImg, this.state.hand, hands)}
 
                     {/* pant */}
-                    <div className="equipment-container-list">
-                        <div className="equipment-img-container">
-                            <img
-                             src={pantImg}
-                             alt=""
-                             className="equipment-img"
-                            />
-                        </div>
-                        <div className="equipment-input-container">
-                            <div className="row">
-                                <input
-                                 className="littleText equipment-input-name"
-                                 onChange={(e) => {
-                                    this.handleInputPants("name", e.target.value)
-                                 }}
-                                 value={this.state.pants.name}
-                                 placeholder="Name"
-                                />
-                                <button
-                                 className="little-circle-button add-button" 
-                                 onClick={() => {this.addEquipment("pants")}}
-                                >
-                                    +
-                                </button>
-                            </div>
-                            <textarea
-                             className="littleText equipment-input-desc"
-                             onChange={(e) => {
-                                this.handleInputPants("desc", e.target.value)
-                             }}
-                             value={this.state.pants.desc}
-                             placeholder="Description"
-                            />
-                        </div>
-                        {pants}
-                    </div>
-
+                    {this.createEquipementInput("pants", pantImg, this.state.pants, pants)}
+                    
                     {/* foot */}
-                    <div className="equipment-container-list">
-                        <div className="equipment-img-container">
-                            <img
-                            src={footImg}
-                             alt=""
-                             className="equipment-img"
-                            />
-                        </div>
-                        <div className="equipment-input-container">
-                            <div className="row">
-                                <input
-                                 className="littleText equipment-input-name"
-                                 onChange={(e) => {
-                                    this.handleInputFoot("name", e.target.value)
-                                 }}
-                                 value={this.state.foot.name}
-                                 placeholder="Name"
-                                />
-                                <button
-                                 className="little-circle-button add-button"
-                                 onClick={() => {this.addEquipment("foot")}}
-                                >
-                                    +
-                                </button>
-                            </div>
-                            <textarea
-                             className="littleText equipment-input-desc"
-                             onChange={(e) => {
-                                this.handleInputFoot("desc", e.target.value)
-                             }}
-                             value={this.state.foot.desc}
-                             placeholder="Description"
-                            />
-                        </div>
-                        {foots}
-                    </div>
-
+                    {this.createEquipementInput("foot", footImg, this.state.foot, foots)}
+                    
                     {/* weapon */}
-                    <div className="equipment-container-list">
-                        <div className="equipment-img-container">
-                            <img
-                             src={weaponImg}
-                             alt=""
-                             className="equipment-img"
-                            />
-                        </div>
-                        <div className="equipment-input-container">
-                            <div className="row">
-                                <input
-                                 className="littleText equipment-input-name"
-                                 onChange={(e) => {
-                                    this.handleInputWeapon("name", e.target.value)
-                                 }}
-                                 value={this.state.weapon.name}
-                                 placeholder="Name"
-                                />
-                                <button
-                                 className="little-circle-button add-button"
-                                 onClick={() => {this.addEquipment("weapon")}}
-                                >
-                                    +
-                                </button>
-                            </div>
-                            <textarea
-                             className="littleText equipment-input-desc"
-                             onChange={(e) => {
-                                this.handleInputWeapon("desc", e.target.value)
-                             }}
-                             value={this.state.weapon.desc}
-                             placeholder="Description"
-                            />
-                        </div>
-                        {weapons}
-                    </div>
+                    {this.createEquipementInput("weapon", weaponImg, this.state.weapon, weapons)}
 
                 </div>
             </div>

@@ -1,0 +1,43 @@
+@media (max-width: 1024px) {
+
+    /* Character Settings */
+    .character-desc-div {
+        margin-top: 1rem;
+    }
+
+    /* Equipment */
+    .equipment-container-list {
+        flex-direction: column;
+    }
+
+    .equipment-input-name {
+        
+        max-width: 120px;
+    }
+
+    .equiped-equipement-list {
+        justify-content: center;
+    }
+
+    .equipment-input-container-w-img {
+        align-self: center;
+    }
+    
+    /* Inventory */
+    .inventory-input {
+        font-size: 1.75rem;
+    }
+
+    .inventory-name-cel {
+        font-size: 1.75rem;
+    }
+
+    .inventory-desc-cel {
+        font-size: 1.75rem;
+    }
+
+    .inventory-num-cel {
+        font-size: 1.75rem;
+    }
+
+}

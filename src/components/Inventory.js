@@ -63,14 +63,20 @@ export default class Inventory extends React.Component {
         let inventory = this.state.infos.Inventory.map((obj, index) => {
             return (
                 <div className="row" key={obj.name + "_" + index}>
-                    <div className="littleText inventory-tab-cel inventory-name-cel">
-                        {obj.name}
-                    </div>
                     <input
+                     className="littleText inventory-tab-cel inventory-name-cel"
                      type="text"
-                     className="littleText inventory-tab-cel"
+                     value={obj.name}
+                     readOnly
+                    />
+                    <textarea
+                     type="text"
+                     className="littleText inventory-tab-cel inventory-desc-cel"
                      value={obj.desc}
                      onChange={(e) => { this.handleInTab(e, index, "desc") }}
+                     style={{
+                        resize: "none"
+                     }}
                     />
                     <input
                      type="number"

@@ -58,10 +58,6 @@ html, body, #app, #root, #app>div {
   font-family: "CloisterBlack";
 }
 
-.activate {
-  margin-left: 0 !important;
-}
-
 body {
   scrollbar-color: dark;
 }
