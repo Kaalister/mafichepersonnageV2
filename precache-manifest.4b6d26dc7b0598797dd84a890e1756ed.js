@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "cef635d268107132ddce7b80f4b2ca3d",
+    "revision": "93a955b892112b2ada762bd1e62d5dbc",
     "url": "/mafichepersonnageV2/index.html"
   },
   {
