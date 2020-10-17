@@ -14,18 +14,17 @@ export default class BurgerMenu extends React.Component {
         let currentPage = document.getElementById("current-page");
         let totalHeight = "100%";
         if ( null !== currentPage ) {
-            totalHeight = currentPage.offsetHeight + "px";
+            totalHeight = currentPage.clientHeight + "px";
         }
 
+        console.log(totalHeight)
         if (this.props.Burger) {
             burgerContainerClass += " activate";
-            burgerOverlayClass += " activate";
+            burgerOverlayClass = "activate " + burgerOverlayClass;
         }
         return(
-            <div>
-                <div className={burgerOverlayClass}
-                 style={{height: "calc(" + totalHeight + " + 25vh)"}}
-                />
+            <div style={{position: "absolute"}}>
+                <div className={burgerOverlayClass}/>
                 <div
                  id="burgerMenu"
                  className={burgerContainerClass}
