@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/mafichepersonnageV2/static/css/main.a837d4e2.chunk.css",
-    "main.js": "/mafichepersonnageV2/static/js/main.91d9f367.chunk.js",
-    "main.js.map": "/mafichepersonnageV2/static/js/main.91d9f367.chunk.js.map",
+    "main.css": "/mafichepersonnageV2/static/css/main.e0940c4a.chunk.css",
+    "main.js": "/mafichepersonnageV2/static/js/main.41f8a37b.chunk.js",
+    "main.js.map": "/mafichepersonnageV2/static/js/main.41f8a37b.chunk.js.map",
     "runtime-main.js": "/mafichepersonnageV2/static/js/runtime-main.22792ec2.js",
     "runtime-main.js.map": "/mafichepersonnageV2/static/js/runtime-main.22792ec2.js.map",
     "static/js/2.90dbea84.chunk.js": "/mafichepersonnageV2/static/js/2.90dbea84.chunk.js",
     "static/js/2.90dbea84.chunk.js.map": "/mafichepersonnageV2/static/js/2.90dbea84.chunk.js.map",
     "index.html": "/mafichepersonnageV2/index.html",
-    "precache-manifest.547efcecaa0f86fe5791e7d66d9051c6.js": "/mafichepersonnageV2/precache-manifest.547efcecaa0f86fe5791e7d66d9051c6.js",
+    "precache-manifest.934f2167955f464f9ebfa5491da63f62.js": "/mafichepersonnageV2/precache-manifest.934f2167955f464f9ebfa5491da63f62.js",
     "service-worker.js": "/mafichepersonnageV2/service-worker.js",
-    "static/css/main.a837d4e2.chunk.css.map": "/mafichepersonnageV2/static/css/main.a837d4e2.chunk.css.map",
+    "static/css/main.e0940c4a.chunk.css.map": "/mafichepersonnageV2/static/css/main.e0940c4a.chunk.css.map",
     "static/js/2.90dbea84.chunk.js.LICENSE.txt": "/mafichepersonnageV2/static/js/2.90dbea84.chunk.js.LICENSE.txt",
     "static/media/Blacksword.otf": "/mafichepersonnageV2/static/media/Blacksword.a9053120.otf",
     "static/media/CloisterBlack.ttf": "/mafichepersonnageV2/static/media/CloisterBlack.d15613cd.ttf",
@@ -27,7 +27,7 @@
   "entrypoints": [
     "static/js/runtime-main.22792ec2.js",
     "static/js/2.90dbea84.chunk.js",
-    "static/css/main.a837d4e2.chunk.css",
-    "static/js/main.91d9f367.chunk.js"
+    "static/css/main.e0940c4a.chunk.css",
+    "static/js/main.41f8a37b.chunk.js"
   ]
 }
